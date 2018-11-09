@@ -1,14 +1,14 @@
 FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
 WORKDIR /app
-EXPOSE 52689
-EXPOSE 44356
+EXPOSE 64993
+EXPOSE 44388
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["SansApp/SansApp.csproj", "SansApp/"]
-RUN dotnet restore "SansApp/SansApp.csproj"
+COPY ["src/SansApp/SansApp.csproj", "src/SansApp/"]
+RUN dotnet restore "src/SansApp/SansApp.csproj"
 COPY . .
-WORKDIR "/src/SansApp"
+WORKDIR "/src/src/SansApp"
 RUN dotnet build "SansApp.csproj" -c Release -o /app
 
 FROM build AS publish

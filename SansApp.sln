@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SansApp", "SansApp\SansApp.csproj", "{7103C38F-2EB5-4235-BC8C-3ABAEBC98F09}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E294ADB9-6900-4884-B0A9-B64CDE6AF352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SansApp", "src\SansApp\SansApp.csproj", "{A01FF05F-CC58-45E1-866E-4446A297C126}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7103C38F-2EB5-4235-BC8C-3ABAEBC98F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7103C38F-2EB5-4235-BC8C-3ABAEBC98F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7103C38F-2EB5-4235-BC8C-3ABAEBC98F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7103C38F-2EB5-4235-BC8C-3ABAEBC98F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01FF05F-CC58-45E1-866E-4446A297C126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01FF05F-CC58-45E1-866E-4446A297C126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01FF05F-CC58-45E1-866E-4446A297C126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01FF05F-CC58-45E1-866E-4446A297C126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A01FF05F-CC58-45E1-866E-4446A297C126} = {E294ADB9-6900-4884-B0A9-B64CDE6AF352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EE64C72-A44B-4F33-8051-9F66F94BEB76}

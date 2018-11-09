@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <UserSecretsId>aspnet-SansApp-9F3F1DB1-C588-4910-A932-AE24E41A5CB0</UserSecretsId>
+    <UserSecretsId>aspnet-SansApp-6095876A-8708-4465-9E71-BA6BA6C36C0B</UserSecretsId>
     <DockerTargetOS>Linux</DockerTargetOS>
   </PropertyGroup>
 
