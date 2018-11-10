@@ -33,10 +33,10 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/home/home.component */ "./src/app/components/pages/home/home.component.ts");
-/* harmony import */ var _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/send-message/send-message.component */ "./src/app/components/pages/send-message/send-message.component.ts");
+/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,16 +48,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: '', component: _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
-    { path: 'chat', component: _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_3__["SendMessageComponent"] },
+    { path: '', component: _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_0__["TotemComponent"] },
+    { path: 'chat', component: _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_3__["ControlComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -74,7 +74,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n  <div [hidden]=\"isLoading() === false\">\n    <app-loader></app-loader>\n  </div>\n\n  <div class=\"page\" [hidden]=\"isLoading() === true\">\n\n    <div class=\"content\">\n      <app-header class=\"header\"></app-header>\n      <router-outlet class=\"router-flex\" #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <app-footer></app-footer>\n    </div>\n\n  </div>\n\n</div>\n"
+module.exports = "\n<router-outlet class=\"router-flex\"></router-outlet>\n\n<!--super pecionata da sistemare-->\n<!-- \n<div>\n\n  <div [hidden]=\"isLoading() === false\">\n    <app-loader></app-loader>\n  </div>\n\n  <div class=\"page\" [hidden]=\"isLoading() === true\">\n\n    <div class=\"content\">\n      <app-header class=\"header\"></app-header>\n      <router-outlet class=\"router-flex\" #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <app-footer></app-footer>\n    </div>\n\n  </div>\n\n</div> -->\n"
 
 /***/ }),
 
@@ -158,12 +158,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/totem/adv-banner/adv-banner.component */ "./src/app/components/totem/adv-banner/adv-banner.component.ts");
 /* harmony import */ var _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/send-message/send-message.component */ "./src/app/components/pages/send-message/send-message.component.ts");
 /* harmony import */ var _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/chat/send-message-control/send-message-control.component */ "./src/app/components/chat/send-message-control/send-message-control.component.ts");
+/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
+/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -193,7 +197,9 @@ var AppModule = /** @class */ (function () {
                 _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_10__["SoundGraphComponent"],
                 _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__["AdvBannerComponent"],
                 _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__["SendMessageComponent"],
-                _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__["SendMessageControlComponent"]
+                _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__["SendMessageControlComponent"],
+                _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_14__["TotemComponent"],
+                _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_15__["ControlComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -258,14 +264,6 @@ var SendMessageControlComponent = /** @class */ (function () {
     function SendMessageControlComponent() {
     }
     SendMessageControlComponent.prototype.ngOnInit = function () {
-    };
-    SendMessageControlComponent.prototype.ngAfterViewInit = function () {
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-                // this.video.nativeElement.src = window.URL.createObjectURL(stream);
-                // this.video.nativeElement.play();
-            });
-        }
     };
     SendMessageControlComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -472,6 +470,73 @@ var LoaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/pages/control/control.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/pages/control/control.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-send-message class=\"d-flex flex-fill\"></app-send-message>\n      </div>\n  \n      <div class=\"footer\">\n        <app-footer></app-footer>\n      </div>\n  \n    </div>\n  \n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/control/control.component.scss":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/pages/control/control.component.scss ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9jb250cm9sL0M6XFxVc2Vyc1xcU2ltb25lXFxzb3VyY2VcXHJlcG9zXFxTYW5zQXBwXFxzcmNcXFdlYkFwcFxcU2Fuc0FwcC5Bbmd1bGFyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxwYWdlc1xcY29udHJvbFxcY29udHJvbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL2NvbnRyb2wvY29udHJvbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucGFnZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBmbGV4OiAxIDAgYXV0bztcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyIHtcclxuICAgIGZsZXg6IDAgMSBhdXRvO1xyXG4gIH1cclxuICBcclxuICAuZm9vdGVyIHtcclxuICAgIGZsZXgtc2hyaW5rOiAwO1xyXG4gIH1cclxuICAiXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/control/control.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/pages/control/control.component.ts ***!
+  \***************************************************************/
+/*! exports provided: ControlComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ControlComponent", function() { return ControlComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ControlComponent = /** @class */ (function () {
+    function ControlComponent() {
+        this.isAppReady = false;
+    }
+    ControlComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.isAppReady = true;
+        }, 1500);
+    };
+    ControlComponent.prototype.isLoading = function () {
+        return !this.isAppReady;
+    };
+    ControlComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-control',
+            template: __webpack_require__(/*! ./control.component.html */ "./src/app/components/pages/control/control.component.html"),
+            styles: [__webpack_require__(/*! ./control.component.scss */ "./src/app/components/pages/control/control.component.scss")]
+        })
+    ], ControlComponent);
+    return ControlComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/pages/home/home.component.html":
 /*!***********************************************************!*\
   !*** ./src/app/components/pages/home/home.component.html ***!
@@ -479,7 +544,7 @@ var LoaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid h-100 align-self-center\">\n\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n\n  <div class=\"row align-items-center justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n  <div class=\"row align-items-end justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
+module.exports = "\n<div class=\"container-fluid align-self-start\">\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-center flex-fill\">\n\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -542,7 +607,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n\n      <!-- <hr>\n\n      <div>\n        <label>dB</label>\n        <input class=\"form-control\" [(ngModel)]=\"dbValue\">\n      </div> -->\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n\n      <!-- <hr>\n\n      <div>\n        <label>dB</label>\n        <input class=\"form-control\" [(ngModel)]=\"dbValue\">\n      </div> -->\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -606,6 +671,73 @@ var SendMessageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SendMessageComponent);
     return SendMessageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/pages/totem/totem.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/pages/totem/totem.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <div class=\"footer\">\n        <app-footer></app-footer>\n      </div>\n  \n    </div>\n  \n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/totem/totem.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/components/pages/totem/totem.component.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xccGFnZXNcXHRvdGVtXFx0b3RlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL3RvdGVtL3RvdGVtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5wYWdlIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgbWluLWhlaWdodDogMTAwdmg7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250ZW50IHtcclxuICAgIGZsZXg6IDEgMCBhdXRvO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgfVxyXG4gIFxyXG4gIC5oZWFkZXIge1xyXG4gICAgZmxleDogMCAxIGF1dG87XHJcbiAgfVxyXG4gIFxyXG4gIC5mb290ZXIge1xyXG4gICAgZmxleC1zaHJpbms6IDA7XHJcbiAgfVxyXG4gICJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/totem/totem.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/pages/totem/totem.component.ts ***!
+  \***********************************************************/
+/*! exports provided: TotemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotemComponent", function() { return TotemComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var TotemComponent = /** @class */ (function () {
+    function TotemComponent() {
+        this.isAppReady = false;
+    }
+    TotemComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.isAppReady = true;
+        }, 1500);
+    };
+    TotemComponent.prototype.isLoading = function () {
+        return !this.isAppReady;
+    };
+    TotemComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-totem',
+            template: __webpack_require__(/*! ./totem.component.html */ "./src/app/components/pages/totem/totem.component.html"),
+            styles: [__webpack_require__(/*! ./totem.component.scss */ "./src/app/components/pages/totem/totem.component.scss")]
+        })
+    ], TotemComponent);
+    return TotemComponent;
 }());
 
 
@@ -773,7 +905,7 @@ var Message = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  sound-graph works!\n</p>\n"
+module.exports = "\n<!-- <audio id=\"gum-local\" controls autoplay></audio> -->\n"
 
 /***/ }),
 
@@ -813,6 +945,19 @@ var SoundGraphComponent = /** @class */ (function () {
     function SoundGraphComponent() {
     }
     SoundGraphComponent.prototype.ngOnInit = function () {
+    };
+    SoundGraphComponent.prototype.ngAfterViewInit = function () {
+        // if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        //     navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(stream => {
+        //       this.mediaStream = stream;
+        //         // this.video.nativeElement.src = window.URL.createObjectURL(stream);
+        //         // this.video.nativeElement.play();
+        //         this.mediaRecorder = new MediaRecorder(this.mediaStream);
+        //     });
+        //     setInterval(() => {
+        //       this.sampleAudio();
+        //     }, 1000);
+        // }
     };
     SoundGraphComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

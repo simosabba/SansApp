@@ -13,6 +13,8 @@ import { SoundGraphComponent } from './components/totem/sound-graph/sound-graph.
 import { AdvBannerComponent } from './components/totem/adv-banner/adv-banner.component';
 import { SendMessageComponent } from './components/pages/send-message/send-message.component';
 import { SendMessageControlComponent } from './components/chat/send-message-control/send-message-control.component';
+import { TotemComponent } from './components/pages/totem/totem.component';
+import { ControlComponent } from './components/pages/control/control.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SendMessageControlComponent } from './components/chat/send-message-cont
     SoundGraphComponent,
     AdvBannerComponent,
     SendMessageComponent,
-    SendMessageControlComponent
+    SendMessageControlComponent,
+    TotemComponent,
+    ControlComponent
   ],
   imports: [
     BrowserModule,

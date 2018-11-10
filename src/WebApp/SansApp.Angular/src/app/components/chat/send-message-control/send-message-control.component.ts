@@ -5,19 +5,10 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   templateUrl: './send-message-control.component.html',
   styleUrls: ['./send-message-control.component.scss']
 })
-export class SendMessageControlComponent implements OnInit, AfterViewInit {
+export class SendMessageControlComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
-            // this.video.nativeElement.src = window.URL.createObjectURL(stream);
-            // this.video.nativeElement.play();
-        });
-    }
   }
 }
