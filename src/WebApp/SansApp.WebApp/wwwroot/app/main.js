@@ -36,6 +36,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/home/home.component */ "./src/app/components/pages/home/home.component.ts");
+/* harmony import */ var _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/send-message/send-message.component */ "./src/app/components/pages/send-message/send-message.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,8 +46,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: '', component: _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] }
+    { path: '', component: _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+    { path: 'chat', component: _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_3__["SendMessageComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -143,15 +146,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/layout/footer/footer.component */ "./src/app/components/layout/footer/footer.component.ts");
-/* harmony import */ var _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/layout/header/header.component */ "./src/app/components/layout/header/header.component.ts");
-/* harmony import */ var _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/layout/loader/loader.component */ "./src/app/components/layout/loader/loader.component.ts");
-/* harmony import */ var _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/pages/home/home.component */ "./src/app/components/pages/home/home.component.ts");
-/* harmony import */ var _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/totem/people-communication/people-communication.component */ "./src/app/components/totem/people-communication/people-communication.component.ts");
-/* harmony import */ var _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/totem/sound-graph/sound-graph.component */ "./src/app/components/totem/sound-graph/sound-graph.component.ts");
-/* harmony import */ var _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/totem/adv-banner/adv-banner.component */ "./src/app/components/totem/adv-banner/adv-banner.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/layout/footer/footer.component */ "./src/app/components/layout/footer/footer.component.ts");
+/* harmony import */ var _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/layout/header/header.component */ "./src/app/components/layout/header/header.component.ts");
+/* harmony import */ var _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/layout/loader/loader.component */ "./src/app/components/layout/loader/loader.component.ts");
+/* harmony import */ var _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/pages/home/home.component */ "./src/app/components/pages/home/home.component.ts");
+/* harmony import */ var _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/totem/people-communication/people-communication.component */ "./src/app/components/totem/people-communication/people-communication.component.ts");
+/* harmony import */ var _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/totem/sound-graph/sound-graph.component */ "./src/app/components/totem/sound-graph/sound-graph.component.ts");
+/* harmony import */ var _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/totem/adv-banner/adv-banner.component */ "./src/app/components/totem/adv-banner/adv-banner.component.ts");
+/* harmony import */ var _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/send-message/send-message.component */ "./src/app/components/pages/send-message/send-message.component.ts");
+/* harmony import */ var _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/chat/send-message-control/send-message-control.component */ "./src/app/components/chat/send-message-control/send-message-control.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -169,30 +175,99 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_4__["FooterComponent"],
-                _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
-                _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_6__["LoaderComponent"],
-                _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-                _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_8__["PeopleCommunicationComponent"],
-                _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_9__["SoundGraphComponent"],
-                _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_10__["AdvBannerComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"],
+                _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
+                _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_7__["LoaderComponent"],
+                _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+                _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_9__["PeopleCommunicationComponent"],
+                _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_10__["SoundGraphComponent"],
+                _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__["AdvBannerComponent"],
+                _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__["SendMessageComponent"],
+                _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__["SendMessageControlComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/chat/send-message-control/send-message-control.component.html":
+/*!******************************************************************************************!*\
+  !*** ./src/app/components/chat/send-message-control/send-message-control.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  send-message-control works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/chat/send-message-control/send-message-control.component.scss":
+/*!******************************************************************************************!*\
+  !*** ./src/app/components/chat/send-message-control/send-message-control.component.scss ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY2hhdC9zZW5kLW1lc3NhZ2UtY29udHJvbC9zZW5kLW1lc3NhZ2UtY29udHJvbC5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/chat/send-message-control/send-message-control.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/components/chat/send-message-control/send-message-control.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: SendMessageControlComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendMessageControlComponent", function() { return SendMessageControlComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SendMessageControlComponent = /** @class */ (function () {
+    function SendMessageControlComponent() {
+    }
+    SendMessageControlComponent.prototype.ngOnInit = function () {
+    };
+    SendMessageControlComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-send-message-control',
+            template: __webpack_require__(/*! ./send-message-control.component.html */ "./src/app/components/chat/send-message-control/send-message-control.component.html"),
+            styles: [__webpack_require__(/*! ./send-message-control.component.scss */ "./src/app/components/chat/send-message-control/send-message-control.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SendMessageControlComponent);
+    return SendMessageControlComponent;
 }());
 
 
@@ -452,6 +527,83 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/pages/send-message/send-message.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/pages/send-message/send-message.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\">Invia</button>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/send-message/send-message.component.scss":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/pages/send-message/send-message.component.scss ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvc2VuZC1tZXNzYWdlL3NlbmQtbWVzc2FnZS5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/send-message/send-message.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/pages/send-message/send-message.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: SendMessageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendMessageComponent", function() { return SendMessageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aspnet/signalr */ "./node_modules/@aspnet/signalr/dist/esm/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SendMessageComponent = /** @class */ (function () {
+    function SendMessageComponent() {
+        this.message = '';
+        this.user = '';
+    }
+    SendMessageComponent.prototype.ngOnInit = function () {
+        this._hubConnection = new _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
+            .withUrl('/chatHub')
+            .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
+            .build();
+        this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
+    };
+    SendMessageComponent.prototype.send = function () {
+        if (this.user && this.message) {
+            this._hubConnection.send('SendMessage', this.user, this.message);
+        }
+    };
+    SendMessageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-send-message',
+            template: __webpack_require__(/*! ./send-message.component.html */ "./src/app/components/pages/send-message/send-message.component.html"),
+            styles: [__webpack_require__(/*! ./send-message.component.scss */ "./src/app/components/pages/send-message/send-message.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SendMessageComponent);
+    return SendMessageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/totem/adv-banner/adv-banner.component.html":
 /*!***********************************************************************!*\
   !*** ./src/app/components/totem/adv-banner/adv-banner.component.html ***!
@@ -541,13 +693,15 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*!*****************************************************************************************!*\
   !*** ./src/app/components/totem/people-communication/people-communication.component.ts ***!
   \*****************************************************************************************/
-/*! exports provided: PeopleCommunicationComponent */
+/*! exports provided: PeopleCommunicationComponent, Message */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PeopleCommunicationComponent", function() { return PeopleCommunicationComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Message", function() { return Message; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aspnet/signalr */ "./node_modules/@aspnet/signalr/dist/esm/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -558,10 +712,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var PeopleCommunicationComponent = /** @class */ (function () {
     function PeopleCommunicationComponent() {
     }
     PeopleCommunicationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._hubConnection = new _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
+            .withUrl('/chatHub')
+            .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
+            .build();
+        this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
+        this._hubConnection.on('ReceiveMessage', function (user, message) {
+            _this.message = {
+                user: user,
+                message: message
+            };
+            console.log('message received', user, ': ', message);
+        });
     };
     PeopleCommunicationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -572,6 +740,12 @@ var PeopleCommunicationComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], PeopleCommunicationComponent);
     return PeopleCommunicationComponent;
+}());
+
+var Message = /** @class */ (function () {
+    function Message() {
+    }
+    return Message;
 }());
 
 
