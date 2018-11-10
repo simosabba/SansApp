@@ -15,6 +15,11 @@ namespace SansApp.WebApp.Controllers
             await Clients.All.SendAsync("ReceiveMessage", user, message, new Guid().ToString());
         }
 
+        public override async Task OnConnectedAsync()
+        {
+            await Clients.All.SendAsync("ReceiveShh", ShhCount);
+        }
+
         public async Task SendShh()
         {
             ShhCount++;

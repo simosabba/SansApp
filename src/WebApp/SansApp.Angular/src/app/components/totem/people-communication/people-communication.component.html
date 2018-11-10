@@ -1,19 +1,29 @@
 <div class="chat-container">
-  <div class="row my-3" *ngIf="message">
-    <div class="col-sm-1">
-      <img id="profile-img" class="profile-img-card" src="/app/assets/img/accounts/avatar_2x.png">
-    </div>
-    <div class="col-sm-4">
-      <div class="card p-1">
-        <strong>{{message.user}}</strong>
-        <div>
-          {{message.message}}
+  <div class="row my-4">
+    
+    <div class="col-sm-5">
+      <div class="row" *ngIf="message">
+        <div class="col-2">
+            <img id="profile-img" class="profile-img-card" src="/app/assets/img/accounts/avatar_2x.png">
+        </div>
+        <div class="col">
+          <div class="card p-1">
+            <strong>{{message.user}}</strong>
+            <div>
+              {{message.message}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
     
-    <div class="col-sm-4">
-      
+    <div class="col-sm-4 offset-sm-3">
+      <div id="shh-counter">
+        <span class="digit">{{getShhCypher(4)}}</span>
+        <span class="digit">{{getShhCypher(3)}}</span>
+        <span class="digit">{{getShhCypher(2)}}</span>
+        <span class="digit">{{getShhCypher(1)}}</span>
+      </div>
     </div>
   </div>
 </div>

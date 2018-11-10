@@ -25,6 +25,7 @@ export class SendMessageComponent implements OnInit {
   sendMessage() {
     if (this.user && this.message) {
       this._hubConnection.send('SendMessage', this.user, this.message);
+      this.message = '';
     }
   }
 

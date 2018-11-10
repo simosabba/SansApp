@@ -660,6 +660,7 @@ var SendMessageComponent = /** @class */ (function () {
     SendMessageComponent.prototype.sendMessage = function () {
         if (this.user && this.message) {
             this._hubConnection.send('SendMessage', this.user, this.message);
+            this.message = '';
         }
     };
     SendMessageComponent.prototype.sendShh = function () {
@@ -698,7 +699,7 @@ module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xccGFnZXNcXHRvdGVtXFx0b3RlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL3RvdGVtL3RvdGVtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5wYWdlIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgbWluLWhlaWdodDogMTAwdmg7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250ZW50IHtcclxuICAgIGZsZXg6IDEgMCBhdXRvO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgfVxyXG4gIFxyXG4gIC5oZWFkZXIge1xyXG4gICAgZmxleDogMCAxIGF1dG87XHJcbiAgfVxyXG4gIFxyXG4gIC5mb290ZXIge1xyXG4gICAgZmxleC1zaHJpbms6IDA7XHJcbiAgfVxyXG4gICJdfQ== */"
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n.content {\n  background-image: url('/app/assets/img/backgrounds/stars.jpg');\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xccGFnZXNcXHRvdGVtXFx0b3RlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSwrREFBMEQ7RUFDMUQsNkJBQTRCO0VBQzVCLDRCQUEyQjtFQUMzQiw2QkFBNEI7RUFDNUIsdUJBQXNCLEVBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS90b3RlbS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucGFnZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBmbGV4OiAxIDAgYXV0bztcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyIHtcclxuICAgIGZsZXg6IDAgMSBhdXRvO1xyXG4gIH1cclxuICBcclxuICAuZm9vdGVyIHtcclxuICAgIGZsZXgtc2hyaW5rOiAwO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9hc3NldHMvaW1nL2JhY2tncm91bmRzL3N0YXJzLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1hdHRhY2htZW50OiBmaXhlZDtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH0iXX0= */"
 
 /***/ }),
 
@@ -817,7 +818,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-3\" *ngIf=\"message\">\n    <div class=\"col-sm-1\">\n      <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n    </div>\n    <div class=\"col-sm-4\">\n      <div class=\"card p-1\">\n        <strong>{{message.user}}</strong>\n        <div>\n          {{message.message}}\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4\">\n      \n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-4\">\n    \n    <div class=\"col-sm-5\">\n      <div class=\"row\" *ngIf=\"message\">\n        <div class=\"col-2\">\n            <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n        </div>\n        <div class=\"col\">\n          <div class=\"card p-1\">\n            <strong>{{message.user}}</strong>\n            <div>\n              {{message.message}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4 offset-sm-3\">\n      <div id=\"shh-counter\">\n        <span class=\"digit\">{{getShhCypher(4)}}</span>\n        <span class=\"digit\">{{getShhCypher(3)}}</span>\n        <span class=\"digit\">{{getShhCypher(2)}}</span>\n        <span class=\"digit\">{{getShhCypher(1)}}</span>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -828,7 +829,7 @@ module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-3\" *ngI
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gICAgd2lkdGg6IDUycHg7XHJcbiAgICBoZWlnaHQ6IDUycHg7XHJcbiAgICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgfVxyXG4gICJdfQ== */"
+module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n#shh-counter {\n  width: 150px;\n  height: 35px;\n  background-image: url('/app/assets/img/components/contatore-sm.png');\n  background-size: cover; }\n\n#shh-counter .digit {\n    padding-left: 19px;\n    font-size: 28px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxhQUFZO0VBQ1osYUFBWTtFQUNaLHFFQUFnRTtFQUNoRSx1QkFBc0IsRUFNdkI7O0FBVkQ7SUFPSSxtQkFBa0I7SUFDbEIsZ0JBQWUsRUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gIHdpZHRoOiA1MnB4O1xyXG4gIGhlaWdodDogNTJweDtcclxuICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG5cclxuI3NoaC1jb3VudGVyIHtcclxuICB3aWR0aDogMTUwcHg7XHJcbiAgaGVpZ2h0OiAzNXB4O1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL2Fzc2V0cy9pbWcvY29tcG9uZW50cy9jb250YXRvcmUtc20ucG5nJyk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuXHJcbiAgLmRpZ2l0IHtcclxuICAgIHBhZGRpbmctbGVmdDogMTlweDtcclxuICAgIGZvbnQtc2l6ZTogMjhweDtcclxuICB9XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -858,6 +859,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var PeopleCommunicationComponent = /** @class */ (function () {
     function PeopleCommunicationComponent() {
+        this.shhCount = 0;
     }
     PeopleCommunicationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -882,6 +884,12 @@ var PeopleCommunicationComponent = /** @class */ (function () {
         this._hubConnection.on('ReceiveShh', function (shhCount) {
             _this.shhCount = shhCount;
         });
+    };
+    PeopleCommunicationComponent.prototype.getShhCypher = function (cypher) {
+        return this.shhCount
+            .toString()
+            .padStart(4, '0')
+            .substr(4 - cypher, 1);
     };
     PeopleCommunicationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

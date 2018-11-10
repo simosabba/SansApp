@@ -1,8 +1,19 @@
 .profile-img-card {
-    width: 52px;
-    height: 52px;
-    margin: 0 auto 10px;
-    display: block;
-    border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+#shh-counter {
+  width: 150px;
+  height: 35px;
+  background-image: url('/assets/img/components/contatore-sm.png');
+  background-size: cover;
+
+  .digit {
+    padding-left: 19px;
+    font-size: 28px;
   }
-  
+}
