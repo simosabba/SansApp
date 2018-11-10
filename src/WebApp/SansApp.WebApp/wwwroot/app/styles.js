@@ -596,8 +596,8 @@ module.exports = function (css) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\simons\source\repos\simosabba\SansApp\src\WebApp\SansApp.Angular\node_modules\font-awesome\css\font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
-module.exports = __webpack_require__(/*! C:\Users\simons\source\repos\simosabba\SansApp\src\WebApp\SansApp.Angular\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\Simone\source\repos\SansApp\src\WebApp\SansApp.Angular\node_modules\font-awesome\css\font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
+module.exports = __webpack_require__(/*! C:\Users\Simone\source\repos\SansApp\src\WebApp\SansApp.Angular\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })

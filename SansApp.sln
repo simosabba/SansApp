@@ -7,7 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E294ADB9-690
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{EC61B1D5-E85F-42E6-BCF0-C4C93E8B401E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SansApp.WebApp", "src\WebApp\SansApp.WebApp\SansApp.WebApp.csproj", "{6DF18FE6-73AA-4FE4-AF85-0DAD73E60E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SansApp.WebApp", "src\WebApp\SansApp.WebApp\SansApp.WebApp.csproj", "{6DF18FE6-73AA-4FE4-AF85-0DAD73E60E2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{27F6328B-4486-4869-A681-2BA546DD06CE}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\ImportData.ps1 = scripts\ImportData.ps1
+		InsertData.sql = InsertData.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
