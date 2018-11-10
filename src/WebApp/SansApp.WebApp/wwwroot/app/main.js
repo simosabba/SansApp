@@ -149,12 +149,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/layout/header/header.component */ "./src/app/components/layout/header/header.component.ts");
 /* harmony import */ var _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/layout/loader/loader.component */ "./src/app/components/layout/loader/loader.component.ts");
 /* harmony import */ var _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/pages/home/home.component */ "./src/app/components/pages/home/home.component.ts");
+/* harmony import */ var _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/totem/people-communication/people-communication.component */ "./src/app/components/totem/people-communication/people-communication.component.ts");
+/* harmony import */ var _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/totem/sound-graph/sound-graph.component */ "./src/app/components/totem/sound-graph/sound-graph.component.ts");
+/* harmony import */ var _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/totem/adv-banner/adv-banner.component */ "./src/app/components/totem/adv-banner/adv-banner.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -173,7 +179,10 @@ var AppModule = /** @class */ (function () {
                 _components_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_4__["FooterComponent"],
                 _components_layout_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
                 _components_layout_loader_loader_component__WEBPACK_IMPORTED_MODULE_6__["LoaderComponent"],
-                _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"]
+                _components_pages_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+                _components_totem_people_communication_people_communication_component__WEBPACK_IMPORTED_MODULE_8__["PeopleCommunicationComponent"],
+                _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_9__["SoundGraphComponent"],
+                _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_10__["AdvBannerComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -387,7 +396,7 @@ var LoaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-4 col-md-offset-1\">\n      <div class=\"card p-4 my-4\">\n        aaa\n      </div>\n    </div>\n    <div class=\"col-md-6 col-sm-10\">\n        <div class=\"card p-4 my-4\">\n          bbb\n        </div>\n      </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container align-self-center\">\n\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-adv-banner></app-adv-banner>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -437,6 +446,195 @@ var HomeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/totem/adv-banner/adv-banner.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/totem/adv-banner/adv-banner.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  adv-banner works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/adv-banner/adv-banner.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/totem/adv-banner/adv-banner.component.scss ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdG90ZW0vYWR2LWJhbm5lci9hZHYtYmFubmVyLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/adv-banner/adv-banner.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/totem/adv-banner/adv-banner.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: AdvBannerComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvBannerComponent", function() { return AdvBannerComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AdvBannerComponent = /** @class */ (function () {
+    function AdvBannerComponent() {
+    }
+    AdvBannerComponent.prototype.ngOnInit = function () {
+    };
+    AdvBannerComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-adv-banner',
+            template: __webpack_require__(/*! ./adv-banner.component.html */ "./src/app/components/totem/adv-banner/adv-banner.component.html"),
+            styles: [__webpack_require__(/*! ./adv-banner.component.scss */ "./src/app/components/totem/adv-banner/adv-banner.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AdvBannerComponent);
+    return AdvBannerComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/totem/people-communication/people-communication.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/components/totem/people-communication/people-communication.component.html ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  people-communication works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/people-communication/people-communication.component.scss":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/components/totem/people-communication/people-communication.component.scss ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdG90ZW0vcGVvcGxlLWNvbW11bmljYXRpb24vcGVvcGxlLWNvbW11bmljYXRpb24uY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/people-communication/people-communication.component.ts":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/components/totem/people-communication/people-communication.component.ts ***!
+  \*****************************************************************************************/
+/*! exports provided: PeopleCommunicationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PeopleCommunicationComponent", function() { return PeopleCommunicationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PeopleCommunicationComponent = /** @class */ (function () {
+    function PeopleCommunicationComponent() {
+    }
+    PeopleCommunicationComponent.prototype.ngOnInit = function () {
+    };
+    PeopleCommunicationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-people-communication',
+            template: __webpack_require__(/*! ./people-communication.component.html */ "./src/app/components/totem/people-communication/people-communication.component.html"),
+            styles: [__webpack_require__(/*! ./people-communication.component.scss */ "./src/app/components/totem/people-communication/people-communication.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PeopleCommunicationComponent);
+    return PeopleCommunicationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/totem/sound-graph/sound-graph.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/totem/sound-graph/sound-graph.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  sound-graph works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/sound-graph/sound-graph.component.scss":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/totem/sound-graph/sound-graph.component.scss ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdG90ZW0vc291bmQtZ3JhcGgvc291bmQtZ3JhcGguY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/totem/sound-graph/sound-graph.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/totem/sound-graph/sound-graph.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: SoundGraphComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SoundGraphComponent", function() { return SoundGraphComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SoundGraphComponent = /** @class */ (function () {
+    function SoundGraphComponent() {
+    }
+    SoundGraphComponent.prototype.ngOnInit = function () {
+    };
+    SoundGraphComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-sound-graph',
+            template: __webpack_require__(/*! ./sound-graph.component.html */ "./src/app/components/totem/sound-graph/sound-graph.component.html"),
+            styles: [__webpack_require__(/*! ./sound-graph.component.scss */ "./src/app/components/totem/sound-graph/sound-graph.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SoundGraphComponent);
+    return SoundGraphComponent;
 }());
 
 

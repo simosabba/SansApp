@@ -7,6 +7,9 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { LoaderComponent } from './components/layout/loader/loader.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { PeopleCommunicationComponent } from './components/totem/people-communication/people-communication.component';
+import { SoundGraphComponent } from './components/totem/sound-graph/sound-graph.component';
+import { AdvBannerComponent } from './components/totem/adv-banner/adv-banner.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HomeComponent } from './components/pages/home/home.component';
     FooterComponent,
     HeaderComponent,
     LoaderComponent,
-    HomeComponent
+    HomeComponent,
+    PeopleCommunicationComponent,
+    SoundGraphComponent,
+    AdvBannerComponent
   ],
   imports: [
     BrowserModule,
