@@ -10,6 +10,7 @@ export class PeopleCommunicationComponent implements OnInit {
 
   private _hubConnection: HubConnection;
   message: Message;
+  msgTime: Date;
 
   constructor() { }
 
@@ -19,14 +20,19 @@ export class PeopleCommunicationComponent implements OnInit {
       .configureLogging(LogLevel.Information)
       .build();
     this._hubConnection.start().catch(err => console.error(err.toString()));
-    this._hubConnection.on('ReceiveMessage', (user: string, message: string) => {
+    this._hubConnection.on('ReceiveMessage', (user: string, message: string, id: string) => {
       this.message = {
         user: user,
-        message: message
+        message: message,
+        id: id
       };
+      setTimeout(() => {
+        if (this.message.id === id) {
+          this.message = undefined;
+        }
+      }, 10000);
       console.log('message received', user, ': ', message);
     });
-
   }
 
 }
@@ -34,4 +40,5 @@ export class PeopleCommunicationComponent implements OnInit {
 export class Message {
   user: string;
   message: string;
+  id: string;
 }

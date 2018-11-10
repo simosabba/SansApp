@@ -1,3 +1,16 @@
-<p>
-  people-communication works!
-</p>
+<div>
+  <div class="row my-3" *ngIf="message">
+    <div class="col-sm-1">
+      <img id="profile-img" class="profile-img-card" src="/app/assets/img/accounts/avatar_2x.png">
+    </div>
+    <div class="col-sm-4">
+        <div class="card p-1">
+          <strong>{{message.user}}</strong>
+          <div>
+            {{message.message}}
+          </div>
+        </div>
+    </div>
+    
+  </div>
+</div>

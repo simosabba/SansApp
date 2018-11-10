@@ -22,7 +22,7 @@ export class SendMessageComponent implements OnInit {
     this._hubConnection.start().catch(err => console.error(err.toString()));
   }
 
-  send() {
+  sendMessage() {
     if (this.user && this.message) {
       this._hubConnection.send('SendMessage', this.user, this.message);
     }

@@ -534,7 +534,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\">Invia</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -584,7 +584,7 @@ var SendMessageComponent = /** @class */ (function () {
             .build();
         this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
     };
-    SendMessageComponent.prototype.send = function () {
+    SendMessageComponent.prototype.sendMessage = function () {
         if (this.user && this.message) {
             this._hubConnection.send('SendMessage', this.user, this.message);
         }
@@ -674,7 +674,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  people-communication works!\n</p>\n"
+module.exports = "<div>\n  <div class=\"row my-3\" *ngIf=\"message\">\n    <div class=\"col-sm-1\">\n      <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n    </div>\n    <div class=\"col-sm-4\">\n        <div class=\"card p-1\">\n          <strong>{{message.user}}</strong>\n          <div>\n            {{message.message}}\n          </div>\n        </div>\n    </div>\n    \n  </div>\n</div>"
 
 /***/ }),
 
@@ -685,7 +685,7 @@ module.exports = "<p>\n  people-communication works!\n</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdG90ZW0vcGVvcGxlLWNvbW11bmljYXRpb24vcGVvcGxlLWNvbW11bmljYXRpb24uY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gICAgd2lkdGg6IDUycHg7XHJcbiAgICBoZWlnaHQ6IDUycHg7XHJcbiAgICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgfVxyXG4gICJdfQ== */"
 
 /***/ }),
 
@@ -723,11 +723,17 @@ var PeopleCommunicationComponent = /** @class */ (function () {
             .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
             .build();
         this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
-        this._hubConnection.on('ReceiveMessage', function (user, message) {
+        this._hubConnection.on('ReceiveMessage', function (user, message, id) {
             _this.message = {
                 user: user,
-                message: message
+                message: message,
+                id: id
             };
+            setTimeout(function () {
+                if (_this.message.id === id) {
+                    _this.message = undefined;
+                }
+            }, 10000);
             console.log('message received', user, ': ', message);
         });
     };
