@@ -78,12 +78,13 @@ namespace SansApp.WebApp
             app.UseAngularAppMiddleware(x =>
             {
                 x.PathsToExclude.Add("/chatHub");
-                //x.InlineSettings = new { endpoints = Configuration.GetSection("Endpoints").Get<Endpoints>() };
+                x.PathsToExclude.Add("/noiseHub");
             });
 
             app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("/chatHub");
+                routes.MapHub<NoiseHub>("/noiseHub");
             });
         }
     }

@@ -534,7 +534,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n\n      <!-- <hr>\n\n      <div>\n        <label>dB</label>\n        <input class=\"form-control\" [(ngModel)]=\"dbValue\">\n      </div> -->\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
