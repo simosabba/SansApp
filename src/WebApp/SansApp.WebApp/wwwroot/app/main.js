@@ -259,6 +259,14 @@ var SendMessageControlComponent = /** @class */ (function () {
     }
     SendMessageControlComponent.prototype.ngOnInit = function () {
     };
+    SendMessageControlComponent.prototype.ngAfterViewInit = function () {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+                // this.video.nativeElement.src = window.URL.createObjectURL(stream);
+                // this.video.nativeElement.play();
+            });
+        }
+    };
     SendMessageControlComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-send-message-control',
