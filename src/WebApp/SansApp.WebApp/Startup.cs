@@ -13,6 +13,7 @@ using SansApp.WebApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
+using SansApp.WebApp.Controllers;
 
 namespace SansApp.WebApp
 {
@@ -48,6 +49,8 @@ namespace SansApp.WebApp
                     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,7 +77,13 @@ namespace SansApp.WebApp
 
             app.UseAngularAppMiddleware(x =>
             {
+                x.PathsToExclude.Add("/chatHub");
                 //x.InlineSettings = new { endpoints = Configuration.GetSection("Endpoints").Get<Endpoints>() };
+            });
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ChatHub>("/chatHub");
             });
         }
     }

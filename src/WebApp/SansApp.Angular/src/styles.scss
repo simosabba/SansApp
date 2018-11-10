@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+router-outlet.router-flex + * {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-fill {
+    display: flex;
+    flex: 1 1 auto;
+  }
+  
+  .card-center {
+    float: none;
+    margin: 0 auto;
+  }
