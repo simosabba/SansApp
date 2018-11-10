@@ -11,6 +11,7 @@ export class PeopleCommunicationComponent implements OnInit {
   private _hubConnection: HubConnection;
   message: Message;
   msgTime: Date;
+  shhCount: number;
 
   constructor() { }
 
@@ -32,6 +33,11 @@ export class PeopleCommunicationComponent implements OnInit {
         }
       }, 10000);
       console.log('message received', user, ': ', message);
+    });
+
+
+    this._hubConnection.on('ReceiveShh', (shhCount: number) => {
+      this.shhCount = shhCount;
     });
   }
 

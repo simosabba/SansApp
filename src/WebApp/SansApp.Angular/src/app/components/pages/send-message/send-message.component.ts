@@ -28,4 +28,7 @@ export class SendMessageComponent implements OnInit {
     }
   }
 
+  sendShh() {
+    this._hubConnection.send('SendShh');
+  }
 }

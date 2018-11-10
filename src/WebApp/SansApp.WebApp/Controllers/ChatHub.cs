@@ -8,7 +8,7 @@ namespace SansApp.WebApp.Controllers
 {
     public class ChatHub : Hub
     {
-        private static int ShhCount = 0;
+        public static int ShhCount = 0;
 
         public async Task SendMessage(string user, string message)
         {
@@ -18,7 +18,7 @@ namespace SansApp.WebApp.Controllers
         public async Task SendShh()
         {
             ShhCount++;
-            await Clients.All.SendAsync("SendShh", ShhCount);
+            await Clients.All.SendAsync("ReceiveShh", ShhCount);
         }
     }
 }

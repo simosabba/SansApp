@@ -488,7 +488,7 @@ module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9jb250cm9sL0M6XFxVc2Vyc1xcU2ltb25lXFxzb3VyY2VcXHJlcG9zXFxTYW5zQXBwXFxzcmNcXFdlYkFwcFxcU2Fuc0FwcC5Bbmd1bGFyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxwYWdlc1xcY29udHJvbFxcY29udHJvbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL2NvbnRyb2wvY29udHJvbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucGFnZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBmbGV4OiAxIDAgYXV0bztcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyIHtcclxuICAgIGZsZXg6IDAgMSBhdXRvO1xyXG4gIH1cclxuICBcclxuICAuZm9vdGVyIHtcclxuICAgIGZsZXgtc2hyaW5rOiAwO1xyXG4gIH1cclxuICAiXX0= */"
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n.content {\n  background-image: url('/app/assets/img/backgrounds/stars.jpg');\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9jb250cm9sL0M6XFxVc2Vyc1xcU2ltb25lXFxzb3VyY2VcXHJlcG9zXFxTYW5zQXBwXFxzcmNcXFdlYkFwcFxcU2Fuc0FwcC5Bbmd1bGFyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxwYWdlc1xcY29udHJvbFxcY29udHJvbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBR0Q7RUFDRSwrREFBMEQ7RUFDMUQsNkJBQTRCO0VBQzVCLDRCQUEyQjtFQUMzQiw2QkFBNEI7RUFDNUIsdUJBQXNCLEVBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9jb250cm9sL2NvbnRyb2wuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnBhZ2Uge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICB9XHJcbiAgXHJcbiAgLmNvbnRlbnQge1xyXG4gICAgZmxleDogMSAwIGF1dG87XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICB9XHJcbiAgXHJcbiAgLmhlYWRlciB7XHJcbiAgICBmbGV4OiAwIDEgYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLmZvb3RlciB7XHJcbiAgICBmbGV4LXNocmluazogMDtcclxuICB9XHJcbiAgXHJcblxyXG4gIC5jb250ZW50IHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL2Fzc2V0cy9pbWcvYmFja2dyb3VuZHMvc3RhcnMuanBnJyk7XHJcbiAgICBiYWNrZ3JvdW5kLWF0dGFjaG1lbnQ6IGZpeGVkO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -607,7 +607,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <h3 class=\"text-center\">Chat</h3>\n      <label>Nome</label>\n      <input [(ngModel)]=\"user\" class=\"form-control\">\n\n      <label>Messaggio</label>\n      <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n\n      <div class=\"text-center my-2\">\n          <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n      </div>\n\n      <hr>\n\n      <div class=\"text-center\">\n          <h3 class=\"text-center\">Shhhh</h3>\n        <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div>\n\n      <div class=\"card p-3 text-center\">\n          <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -661,6 +661,9 @@ var SendMessageComponent = /** @class */ (function () {
         if (this.user && this.message) {
             this._hubConnection.send('SendMessage', this.user, this.message);
         }
+    };
+    SendMessageComponent.prototype.sendShh = function () {
+        this._hubConnection.send('SendShh');
     };
     SendMessageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -814,7 +817,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-3\" *ngIf=\"message\">\n    <div class=\"col-sm-1\">\n      <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n    </div>\n    <div class=\"col-sm-4\">\n        <div class=\"card p-1\">\n          <strong>{{message.user}}</strong>\n          <div>\n            {{message.message}}\n          </div>\n        </div>\n    </div>\n    \n  </div>\n</div>"
+module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-3\" *ngIf=\"message\">\n    <div class=\"col-sm-1\">\n      <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n    </div>\n    <div class=\"col-sm-4\">\n      <div class=\"card p-1\">\n        <strong>{{message.user}}</strong>\n        <div>\n          {{message.message}}\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4\">\n      \n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -825,7 +828,7 @@ module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-3\" *ngI
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n.chat-container {\n  min-height: 200px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDSSxrQkFBaUIsRUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gICAgd2lkdGg6IDUycHg7XHJcbiAgICBoZWlnaHQ6IDUycHg7XHJcbiAgICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgfVxyXG4gIFxyXG4gIC5jaGF0LWNvbnRhaW5lciB7XHJcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xyXG4gIH0iXX0= */"
+module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gICAgd2lkdGg6IDUycHg7XHJcbiAgICBoZWlnaHQ6IDUycHg7XHJcbiAgICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgfVxyXG4gICJdfQ== */"
 
 /***/ }),
 
@@ -875,6 +878,9 @@ var PeopleCommunicationComponent = /** @class */ (function () {
                 }
             }, 10000);
             console.log('message received', user, ': ', message);
+        });
+        this._hubConnection.on('ReceiveShh', function (shhCount) {
+            _this.shhCount = shhCount;
         });
     };
     PeopleCommunicationComponent = __decorate([
