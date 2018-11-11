@@ -157,9 +157,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/totem/sound-graph/sound-graph.component */ "./src/app/components/totem/sound-graph/sound-graph.component.ts");
 /* harmony import */ var _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/totem/adv-banner/adv-banner.component */ "./src/app/components/totem/adv-banner/adv-banner.component.ts");
 /* harmony import */ var _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/send-message/send-message.component */ "./src/app/components/pages/send-message/send-message.component.ts");
-/* harmony import */ var _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/chat/send-message-control/send-message-control.component */ "./src/app/components/chat/send-message-control/send-message-control.component.ts");
-/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
-/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
+/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
+/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
+/* harmony import */ var _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/controls/noise-chart/noise-chart.component */ "./src/app/components/controls/noise-chart/noise-chart.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -197,9 +197,9 @@ var AppModule = /** @class */ (function () {
                 _components_totem_sound_graph_sound_graph_component__WEBPACK_IMPORTED_MODULE_10__["SoundGraphComponent"],
                 _components_totem_adv_banner_adv_banner_component__WEBPACK_IMPORTED_MODULE_11__["AdvBannerComponent"],
                 _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__["SendMessageComponent"],
-                _components_chat_send_message_control_send_message_control_component__WEBPACK_IMPORTED_MODULE_13__["SendMessageControlComponent"],
-                _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_14__["TotemComponent"],
-                _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_15__["ControlComponent"]
+                _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_13__["TotemComponent"],
+                _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_14__["ControlComponent"],
+                _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__["NoiseChartComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -217,38 +217,38 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/chat/send-message-control/send-message-control.component.html":
-/*!******************************************************************************************!*\
-  !*** ./src/app/components/chat/send-message-control/send-message-control.component.html ***!
-  \******************************************************************************************/
+/***/ "./src/app/components/controls/noise-chart/noise-chart.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/components/controls/noise-chart/noise-chart.component.html ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  send-message-control works!\n</p>\n"
+module.exports = "<div id=\"noiseChart\" class=\"epoch w-100\" style=\"min-height: 500px;\"></div>"
 
 /***/ }),
 
-/***/ "./src/app/components/chat/send-message-control/send-message-control.component.scss":
-/*!******************************************************************************************!*\
-  !*** ./src/app/components/chat/send-message-control/send-message-control.component.scss ***!
-  \******************************************************************************************/
+/***/ "./src/app/components/controls/noise-chart/noise-chart.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/app/components/controls/noise-chart/noise-chart.component.scss ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY2hhdC9zZW5kLW1lc3NhZ2UtY29udHJvbC9zZW5kLW1lc3NhZ2UtY29udHJvbC5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY29udHJvbHMvbm9pc2UtY2hhcnQvbm9pc2UtY2hhcnQuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/components/chat/send-message-control/send-message-control.component.ts":
-/*!****************************************************************************************!*\
-  !*** ./src/app/components/chat/send-message-control/send-message-control.component.ts ***!
-  \****************************************************************************************/
-/*! exports provided: SendMessageControlComponent */
+/***/ "./src/app/components/controls/noise-chart/noise-chart.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/controls/noise-chart/noise-chart.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: NoiseChartComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SendMessageControlComponent", function() { return SendMessageControlComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoiseChartComponent", function() { return NoiseChartComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -260,20 +260,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SendMessageControlComponent = /** @class */ (function () {
-    function SendMessageControlComponent() {
+var NoiseChartComponent = /** @class */ (function () {
+    function NoiseChartComponent() {
     }
-    SendMessageControlComponent.prototype.ngOnInit = function () {
+    NoiseChartComponent.prototype.ngOnInit = function () {
     };
-    SendMessageControlComponent = __decorate([
+    NoiseChartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-send-message-control',
-            template: __webpack_require__(/*! ./send-message-control.component.html */ "./src/app/components/chat/send-message-control/send-message-control.component.html"),
-            styles: [__webpack_require__(/*! ./send-message-control.component.scss */ "./src/app/components/chat/send-message-control/send-message-control.component.scss")]
+            selector: 'app-noise-chart',
+            template: __webpack_require__(/*! ./noise-chart.component.html */ "./src/app/components/controls/noise-chart/noise-chart.component.html"),
+            styles: [__webpack_require__(/*! ./noise-chart.component.scss */ "./src/app/components/controls/noise-chart/noise-chart.component.scss")]
         }),
         __metadata("design:paramtypes", [])
-    ], SendMessageControlComponent);
-    return SendMessageControlComponent;
+    ], NoiseChartComponent);
+    return NoiseChartComponent;
 }());
 
 
@@ -919,7 +919,7 @@ var Message = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- <audio id=\"gum-local\" controls autoplay></audio> -->\n"
+module.exports = "\n<!-- <audio id=\"gum-local\" controls autoplay></audio> -->\n<app-noise-chart></app-noise-chart>\n"
 
 /***/ }),
 

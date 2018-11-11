@@ -28,12 +28,16 @@
             ],
             "styles": [
               "node_modules/font-awesome/css/font-awesome.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/libs/epoch-0.8.4/dist/css/epoch.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/jquery.easing/jquery.easing.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "src/libs/d3/d3.js",
+              "src/libs/epoch-0.8.4/dist/js/epoch.js",
+              "src/themes/main/js/chart.js",
               "src/themes/main/js/theme.js"
             ]
           },

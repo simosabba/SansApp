@@ -12,9 +12,9 @@ import { PeopleCommunicationComponent } from './components/totem/people-communic
 import { SoundGraphComponent } from './components/totem/sound-graph/sound-graph.component';
 import { AdvBannerComponent } from './components/totem/adv-banner/adv-banner.component';
 import { SendMessageComponent } from './components/pages/send-message/send-message.component';
-import { SendMessageControlComponent } from './components/chat/send-message-control/send-message-control.component';
 import { TotemComponent } from './components/pages/totem/totem.component';
 import { ControlComponent } from './components/pages/control/control.component';
+import { NoiseChartComponent } from './components/controls/noise-chart/noise-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,9 @@ import { ControlComponent } from './components/pages/control/control.component';
     SoundGraphComponent,
     AdvBannerComponent,
     SendMessageComponent,
-    SendMessageControlComponent,
     TotemComponent,
-    ControlComponent
+    ControlComponent,
+    NoiseChartComponent
   ],
   imports: [
     BrowserModule,

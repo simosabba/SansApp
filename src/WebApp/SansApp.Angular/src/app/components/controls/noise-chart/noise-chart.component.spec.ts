@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SendMessageControlComponent } from './send-message-control.component';
+import { NoiseChartComponent } from './noise-chart.component';
 
-describe('SendMessageControlComponent', () => {
-  let component: SendMessageControlComponent;
-  let fixture: ComponentFixture<SendMessageControlComponent>;
+describe('NoiseChartComponent', () => {
+  let component: NoiseChartComponent;
+  let fixture: ComponentFixture<NoiseChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SendMessageControlComponent ]
+      declarations: [ NoiseChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SendMessageControlComponent);
+    fixture = TestBed.createComponent(NoiseChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
