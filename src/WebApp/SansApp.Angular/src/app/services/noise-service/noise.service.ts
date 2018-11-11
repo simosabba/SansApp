@@ -34,6 +34,10 @@ export class NoiseService {
   setNoiseLevel(dbValue: number) {
     this._hubConnection.send('SetValue', dbValue);
   }
+
+  resetShh() {
+    this._hubConnection.send('ResetShh');
+  }
 }
 
 export class DbSample {

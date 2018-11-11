@@ -30,7 +30,7 @@ namespace SansApp.WebApp.Generator
 
         public Message GenerateHungryMessage()
         {
-            return PickRandomMessage(SentenceRepository.HappyMessages);
+            return PickRandomMessage(SentenceRepository.HungryMessages);
         }
 
         private Message PickRandomMessage(IEnumerable<Message> messages)

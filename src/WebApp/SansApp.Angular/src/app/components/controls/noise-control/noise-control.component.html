@@ -4,6 +4,13 @@
         <div class="card p-3 my-4">
           <h3 class="text-center">dB</h3>
           <input [(ngModel)]="dbValue" type="number" (change)="updateDbValue()" class="form-control">
+          <div class="row my-3">
+            <div class="col"><button class="btn btn-primary w-100" (click)="addVolume()">+</button></div>
+            <div class="col"><button class="btn btn-primary w-100" (click)="lowerVolume()">-</button></div>
+          </div>
+          <div class="row my-3">
+            <div class="col"><button class="btn btn-primary w-100" (click)="resetShh()">Reset Shh</button></div>
+          </div>
         </div>
       </div>
     </div>

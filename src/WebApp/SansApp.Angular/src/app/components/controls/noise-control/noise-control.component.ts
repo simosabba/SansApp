@@ -8,7 +8,7 @@ import { NoiseService } from '../../../services/noise-service/noise.service';
 })
 export class NoiseControlComponent implements OnInit {
 
-  dbValue = 50;
+  dbValue = 60;
 
   constructor(private noiseService: NoiseService) { }
 
@@ -19,4 +19,17 @@ export class NoiseControlComponent implements OnInit {
     this.noiseService.setNoiseLevel(this.dbValue);
   }
 
+  addVolume() {
+    this.dbValue++;
+    this.updateDbValue();
+  }
+
+  lowerVolume() {
+    this.dbValue--;
+    this.updateDbValue();
+  }
+
+  resetShh() {
+    this.noiseService.resetShh();
+  }
 }

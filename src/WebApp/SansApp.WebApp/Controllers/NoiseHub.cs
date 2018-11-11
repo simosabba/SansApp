@@ -35,6 +35,12 @@ namespace SansApp.WebApp.Controllers
         //    }
         //}
 
+        public async Task ResetShh()
+        {
+            ChatHub.ShhCount = 0;
+            await Clients.All.SendAsync("ShhResetted", 0);
+        }
+
         public async Task SetValue(double dbValue)
         {
             Value = dbValue;

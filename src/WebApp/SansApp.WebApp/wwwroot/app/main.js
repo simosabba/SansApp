@@ -384,7 +384,7 @@ var NoiseChartComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container h-100 align-self-center\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-8\">\n        <div class=\"card p-3 my-4\">\n          <h3 class=\"text-center\">dB</h3>\n          <input [(ngModel)]=\"dbValue\" type=\"number\" (change)=\"updateDbValue()\" class=\"form-control\">\n        </div>\n      </div>\n    </div>\n  </div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-8\">\n        <div class=\"card p-3 my-4\">\n          <h3 class=\"text-center\">dB</h3>\n          <input [(ngModel)]=\"dbValue\" type=\"number\" (change)=\"updateDbValue()\" class=\"form-control\">\n          <div class=\"row my-3\">\n            <div class=\"col\"><button class=\"btn btn-primary w-100\" (click)=\"addVolume()\">+</button></div>\n            <div class=\"col\"><button class=\"btn btn-primary w-100\" (click)=\"lowerVolume()\">-</button></div>\n          </div>\n          <div class=\"row my-3\">\n            <div class=\"col\"><button class=\"btn btn-primary w-100\" (click)=\"resetShh()\">Reset Shh</button></div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>"
 
 /***/ }),
 
@@ -425,12 +425,23 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NoiseControlComponent = /** @class */ (function () {
     function NoiseControlComponent(noiseService) {
         this.noiseService = noiseService;
-        this.dbValue = 50;
+        this.dbValue = 60;
     }
     NoiseControlComponent.prototype.ngOnInit = function () {
     };
     NoiseControlComponent.prototype.updateDbValue = function () {
         this.noiseService.setNoiseLevel(this.dbValue);
+    };
+    NoiseControlComponent.prototype.addVolume = function () {
+        this.dbValue++;
+        this.updateDbValue();
+    };
+    NoiseControlComponent.prototype.lowerVolume = function () {
+        this.dbValue--;
+        this.updateDbValue();
+    };
+    NoiseControlComponent.prototype.resetShh = function () {
+        this.noiseService.resetShh();
     };
     NoiseControlComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1305,6 +1316,9 @@ var NoiseService = /** @class */ (function () {
     };
     NoiseService.prototype.setNoiseLevel = function (dbValue) {
         this._hubConnection.send('SetValue', dbValue);
+    };
+    NoiseService.prototype.resetShh = function () {
+        this._hubConnection.send('ResetShh');
     };
     NoiseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
