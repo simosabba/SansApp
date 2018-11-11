@@ -13,32 +13,37 @@
     
     <div class="col-sm-5 offset-sm-2 d-flex flex-column">
       <div class="flex-fill">
-        <div class="row" style="align-items: center;" *ngIf="message">
-            <div class="col-3">
-              <img id="profile-img" class="w-100" [src]="getAvatar()">
-            </div>
-            <div class="col">
-              <div class="card p-1">
-                <strong>{{message.user}}</strong>
-                <div>
-                  {{message.sentence}}
+
+          <div class="row justify-content-center align-self-end">
+              <div class="col">
+                <div id="shh-counter">
+                  <span class="digit">{{getShhCypher(4)}}</span>
+                  <span class="digit">{{getShhCypher(3)}}</span>
+                  <span class="digit">{{getShhCypher(2)}}</span>
+                  <span class="digit">{{getShhCypher(1)}}</span>
                 </div>
               </div>
             </div>
-          </div>
+        
+
+
       </div>
 
-      <div class="row justify-content-center align-self-end">
-        <div class="col">
-          <div id="shh-counter">
-            <span class="digit">{{getShhCypher(4)}}</span>
-            <span class="digit">{{getShhCypher(3)}}</span>
-            <span class="digit">{{getShhCypher(2)}}</span>
-            <span class="digit">{{getShhCypher(1)}}</span>
+      <div class="row" style="align-items: center;" *ngIf="message">
+          <div class="col-3">
+            <img id="profile-img" class="w-100" [src]="getAvatar()">
+          </div>
+          <div class="col">
+            <div class="card p-1">
+              <strong>{{message.user}}</strong>
+              <div>
+                {{message.sentence}}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
     </div>
-    
+
   </div>
 </div>
