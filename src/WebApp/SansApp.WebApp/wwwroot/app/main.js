@@ -1052,7 +1052,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-4\">\n    \n    <div class=\"col-sm-5\">\n      <div class=\"row\" *ngIf=\"message\">\n        <div class=\"col-2\">\n            <img id=\"profile-img\" class=\"profile-img-card\" src=\"/app/assets/img/accounts/avatar_2x.png\">\n        </div>\n        <div class=\"col\">\n          <div class=\"card p-1\">\n            <strong>{{message.user}}</strong>\n            <div>\n              {{message.message}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4 offset-sm-3\">\n      <div id=\"shh-counter\">\n        <span class=\"digit\">{{getShhCypher(4)}}</span>\n        <span class=\"digit\">{{getShhCypher(3)}}</span>\n        <span class=\"digit\">{{getShhCypher(2)}}</span>\n        <span class=\"digit\">{{getShhCypher(1)}}</span>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-4\">\n    \n    <div class=\"col-sm-5\">\n      <div class=\"row\" *ngIf=\"message\">\n        <div class=\"col-2\">\n            <img id=\"profile-img\" \n              class=\"profile-img-card\" \n              [src]=\"getAvatar()\">\n        </div>\n        <div class=\"col\">\n          <div class=\"card p-1\">\n            <strong>{{message.user}}</strong>\n            <div>\n              {{message.sentence}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4 offset-sm-3\">\n      <div id=\"shh-counter\">\n        <span class=\"digit\">{{getShhCypher(4)}}</span>\n        <span class=\"digit\">{{getShhCypher(3)}}</span>\n        <span class=\"digit\">{{getShhCypher(2)}}</span>\n        <span class=\"digit\">{{getShhCypher(1)}}</span>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1102,18 +1102,15 @@ var PeopleCommunicationComponent = /** @class */ (function () {
             .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
             .build();
         this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
-        this._hubConnection.on('ReceiveMessage', function (user, message, id) {
-            _this.message = {
-                user: user,
-                message: message,
-                id: id
-            };
+        this._hubConnection.on('ReceiveMessage', function (message, id) {
+            _this.message = message;
+            _this.messageId = id;
             setTimeout(function () {
-                if (_this.message.id === id) {
+                if (_this.messageId === id) {
                     _this.message = undefined;
                 }
             }, 10000);
-            console.log('message received', user, ': ', message);
+            // console.log('message received', user, ': ', message);
         });
         this._hubConnection.on('ReceiveShh', function (shhCount) {
             _this.shhCount = shhCount;
@@ -1124,6 +1121,15 @@ var PeopleCommunicationComponent = /** @class */ (function () {
             .toString()
             .padStart(4, '0')
             .substr(4 - cypher, 1);
+    };
+    PeopleCommunicationComponent.prototype.getAvatar = function () {
+        if (!this.message) {
+            return '';
+        }
+        if (!this.message.avatarIcon) {
+            return '/app/assets/img/accounts/avatar_2x.png';
+        }
+        return this.message.avatarIcon;
     };
     PeopleCommunicationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

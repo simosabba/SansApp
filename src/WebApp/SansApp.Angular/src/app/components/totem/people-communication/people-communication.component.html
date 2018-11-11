@@ -4,13 +4,15 @@
     <div class="col-sm-5">
       <div class="row" *ngIf="message">
         <div class="col-2">
-            <img id="profile-img" class="profile-img-card" src="/app/assets/img/accounts/avatar_2x.png">
+            <img id="profile-img" 
+              class="profile-img-card" 
+              [src]="getAvatar()">
         </div>
         <div class="col">
           <div class="card p-1">
             <strong>{{message.user}}</strong>
             <div>
-              {{message.message}}
+              {{message.sentence}}
             </div>
           </div>
         </div>

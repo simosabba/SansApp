@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using SansApp.WebApp.Generator;
@@ -9,6 +10,7 @@ namespace SansApp.WebApp.Controllers
 {
     public class ChatHub : Hub
     {
+        public static bool Initialized = false;
         public static int ShhCount = 0;
         private SentencesGenerator _generator = new SentencesGenerator();
 
@@ -25,6 +27,17 @@ namespace SansApp.WebApp.Controllers
         public override async Task OnConnectedAsync()
         {
             await Clients.All.SendAsync("ReceiveShh", ShhCount);
+
+            if (Initialized)
+                return;
+
+            Initialized = true;
+
+            while (true)
+            {
+                Thread.Sleep(10000);
+                await SendAutomaticMessage();
+            }
         }
 
         public async Task SendShh()
@@ -33,7 +46,7 @@ namespace SansApp.WebApp.Controllers
             await Clients.All.SendAsync("ReceiveShh", ShhCount);
         }
 
-        public async Task SendAutomaticMessage()
+        private async Task SendAutomaticMessage()
         {
             var message = _generator.GenerateMessage(NoiseHub.RealValue);
 

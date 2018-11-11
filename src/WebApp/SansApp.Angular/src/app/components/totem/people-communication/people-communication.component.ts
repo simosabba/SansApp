@@ -10,6 +10,8 @@ export class PeopleCommunicationComponent implements OnInit {
 
   private _hubConnection: HubConnection;
   message: Message;
+  messageId: string;
+
   msgTime: Date;
   shhCount = 0;
 
@@ -21,18 +23,15 @@ export class PeopleCommunicationComponent implements OnInit {
       .configureLogging(LogLevel.Information)
       .build();
     this._hubConnection.start().catch(err => console.error(err.toString()));
-    this._hubConnection.on('ReceiveMessage', (user: string, message: string, id: string) => {
-      this.message = {
-        user: user,
-        message: message,
-        id: id
-      };
+    this._hubConnection.on('ReceiveMessage', (message: Message, id: string) => {
+      this.message = message;
+      this.messageId = id;
       setTimeout(() => {
-        if (this.message.id === id) {
+        if (this.messageId === id) {
           this.message = undefined;
         }
       }, 10000);
-      console.log('message received', user, ': ', message);
+      // console.log('message received', user, ': ', message);
     });
 
     this._hubConnection.on('ReceiveShh', (shhCount: number) => {
@@ -46,10 +45,22 @@ export class PeopleCommunicationComponent implements OnInit {
       .padStart(4, '0')
       .substr(4 - cypher, 1);
   }
+
+  getAvatar() {
+    if (!this.message) {
+      return '';
+    }
+
+    if (!this.message.avatarIcon) {
+      return '/app/assets/img/accounts/avatar_2x.png';
+    }
+
+    return this.message.avatarIcon;
+  }
 }
 
 export class Message {
+  avatarIcon: string;
   user: string;
-  message: string;
-  id: string;
+  sentence: string;
 }
