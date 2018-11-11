@@ -275,17 +275,16 @@ var NoiseChartComponent = /** @class */ (function () {
                 if (!chartInitialized && $('#noiseChart')) {
                     chartHelper.initChart();
                     chartInitialized = true;
+                    setInterval(function () {
+                        console.log(dbValue);
+                        pushData([{ time: ((new Date()).getTime() / 1000), y: dbValue }]);
+                    }, 1000);
                 }
             }, 1000);
         }, 3000);
         this.noiseService.noiseSampleReceived.subscribe(function (value) {
             console.log('New noise sample: ', value);
-        });
-    };
-    NoiseChartComponent.prototype.subscribeSamples = function () {
-        this.noiseService.noiseSampleReceived.subscribe(function (value) {
-            console.log('New noise sample: ', value);
-            // chartHelper.pushData({ time: ((new Date()).getTime() / 1000), y: value});
+            dbValue = value;
         });
     };
     NoiseChartComponent = __decorate([

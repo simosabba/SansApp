@@ -140,6 +140,7 @@ var chart = undefined;
 var chartHelper = new function() {
     
     this.initChart = function() {
+        console.log('chart init');
         var data = new RealTimeData(1);
 
         chart = $('#noiseChart').epoch({
@@ -148,20 +149,23 @@ var chartHelper = new function() {
             axes: [
                 //'left', 
                 //'bottom'
-                //'right'
+                'right'
             ]
         });
     
-        setInterval(function() { this.pushData(data.next()); }, 1000);
-        this.pushData(data.next());
+        // setInterval(function() { pushData(data.next()); }, 1000);
+        // pushData(data.next());
     };
 
-    this.pushData = function (data) {
-        chart.push(data);
+    this.pushData = function (newData) {
+        console.log('push data');
+        pushData(newData);
     };
-}
+};
 
 function pushData(data) {
+    console.log('data -> ', data);
     chart.push(data);
-}
+};
 
+var dbValue = 50

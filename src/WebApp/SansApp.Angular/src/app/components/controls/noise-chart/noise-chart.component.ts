@@ -3,7 +3,9 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NoiseService } from '../../../services/noise-service/noise.service';
 
 declare var chartHelper: any;
+declare var pushData: any;
 declare var $: any;
+declare var dbValue: number;
 
 @Component({
   selector: 'app-noise-chart',
@@ -24,19 +26,18 @@ export class NoiseChartComponent implements OnInit, AfterViewInit {
         if (!chartInitialized && $('#noiseChart')) {
             chartHelper.initChart();
             chartInitialized = true;
+
+            setInterval(function () {
+              console.log(dbValue);
+              pushData([{ time: ((new Date()).getTime() / 1000), y: dbValue}]);
+            }, 1000);
         }
       }, 1000);
     }, 3000);
 
     this.noiseService.noiseSampleReceived.subscribe((value: number) => {
       console.log('New noise sample: ', value);
-    });
-  }
-
-  private subscribeSamples() {
-    this.noiseService.noiseSampleReceived.subscribe((value: number) => {
-      console.log('New noise sample: ', value);
-      // chartHelper.pushData({ time: ((new Date()).getTime() / 1000), y: value});
+      dbValue = value;
     });
   }
 }
