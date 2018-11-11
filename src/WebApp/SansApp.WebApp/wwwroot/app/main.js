@@ -250,6 +250,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoiseChartComponent", function() { return NoiseChartComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/noise-service/noise.service */ "./src/app/services/noise-service/noise.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -260,8 +261,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NoiseChartComponent = /** @class */ (function () {
-    function NoiseChartComponent() {
+    function NoiseChartComponent(noiseService) {
+        this.noiseService = noiseService;
     }
     NoiseChartComponent.prototype.ngOnInit = function () {
     };
@@ -275,6 +278,14 @@ var NoiseChartComponent = /** @class */ (function () {
                 }
             }, 1000);
         }, 3000);
+        this.noiseService.noiseSampleReceived.subscribe(function (value) {
+            console.log('New noise sample: ', value);
+        });
+    };
+    NoiseChartComponent.prototype.subscribeSamples = function () {
+        this.noiseService.noiseSampleReceived.subscribe(function (value) {
+            console.log('New noise sample: ', value);
+        });
     };
     NoiseChartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -282,7 +293,7 @@ var NoiseChartComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./noise-chart.component.html */ "./src/app/components/controls/noise-chart/noise-chart.component.html"),
             styles: [__webpack_require__(/*! ./noise-chart.component.scss */ "./src/app/components/controls/noise-chart/noise-chart.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__["NoiseService"]])
     ], NoiseChartComponent);
     return NoiseChartComponent;
 }());
@@ -993,6 +1004,58 @@ var SoundGraphComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SoundGraphComponent);
     return SoundGraphComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/noise-service/noise.service.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/services/noise-service/noise.service.ts ***!
+  \*********************************************************/
+/*! exports provided: NoiseService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoiseService", function() { return NoiseService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aspnet/signalr */ "./node_modules/@aspnet/signalr/dist/esm/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NoiseService = /** @class */ (function () {
+    function NoiseService() {
+        var _this = this;
+        this.noiseSampleReceived = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._hubConnection = new _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
+            .withUrl('/noiseHub')
+            .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
+            .build();
+        this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
+        this._hubConnection.on('ReceiveNewSample', function (value) {
+            _this.addNoiseSample(value);
+        });
+    }
+    NoiseService.prototype.addNoiseSample = function (dbValue) {
+        this.noiseSampleReceived.emit(dbValue);
+    };
+    NoiseService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], NoiseService);
+    return NoiseService;
 }());
 
 

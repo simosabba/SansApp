@@ -1,3 +1,4 @@
+import { SoundGraphComponent } from './../../totem/sound-graph/sound-graph.component';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NoiseService } from '../../../services/noise-service/noise.service';
 
@@ -11,7 +12,7 @@ declare var $: any;
 })
 export class NoiseChartComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private noiseService: NoiseService) { }
 
   ngOnInit() {
   }
@@ -26,5 +27,15 @@ export class NoiseChartComponent implements OnInit, AfterViewInit {
         }
       }, 1000);
     }, 3000);
+
+    this.noiseService.noiseSampleReceived.subscribe((value: number) => {
+      console.log('New noise sample: ', value);
+    });
+  }
+
+  private subscribeSamples() {
+    this.noiseService.noiseSampleReceived.subscribe((value: number) => {
+      console.log('New noise sample: ', value);
+    });
   }
 }
