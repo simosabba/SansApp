@@ -17,7 +17,12 @@
       <div class="my-4"></div> -->
 
       <div class="card p-3 text-center">
-          <button class="btn btn-success btn-lg" (click)="sendShh()">#Shhhhh</button>
+        <h3>Non riesci a dormire? Invia uno shh</h3>
+        <button class="btn btn-success btn-lg" (click)="sendShh()">#Shhhhh</button>
+
+        <div class="alert alert-info text-center my-4" *ngIf="totShh > 0">
+          +{{totShh}} Shh
+        </div>
       </div>
     </div>
   </div>

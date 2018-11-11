@@ -841,7 +841,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <!-- <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div> -->\n\n      <div class=\"card p-3 text-center\">\n          <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <!-- <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div> -->\n\n      <div class=\"card p-3 text-center\">\n        <h3>Non riesci a dormire? Invia uno shh</h3>\n        <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n\n        <div class=\"alert alert-info text-center my-4\" *ngIf=\"totShh > 0\">\n          +{{totShh}} Shh\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -883,6 +883,7 @@ var SendMessageComponent = /** @class */ (function () {
     function SendMessageComponent() {
         this.message = '';
         this.user = '';
+        this.totShh = 0;
     }
     SendMessageComponent.prototype.ngOnInit = function () {
         this._hubConnection = new _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
@@ -899,6 +900,7 @@ var SendMessageComponent = /** @class */ (function () {
     };
     SendMessageComponent.prototype.sendShh = function () {
         this._hubConnection.send('SendShh');
+        this.totShh++;
     };
     SendMessageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

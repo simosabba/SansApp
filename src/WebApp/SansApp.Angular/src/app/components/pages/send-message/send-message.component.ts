@@ -11,6 +11,7 @@ export class SendMessageComponent implements OnInit {
   private _hubConnection: HubConnection;
   message = '';
   user = '';
+  totShh = 0;
 
   constructor() { }
 
@@ -31,5 +32,6 @@ export class SendMessageComponent implements OnInit {
 
   sendShh() {
     this._hubConnection.send('SendShh');
+    this.totShh++;
   }
 }
