@@ -20959,12 +20959,12 @@ if (window.Zepto != null) {
             history.push(config);
         }
 
-        for (var i = 0; i < entries; i++) {
-            for (var j = 0; j < this.layers; j++) {
-                history[j].values.push({time: this.timestamp, y: this.rand(this.bounds[j])});
-            }
-            this.timestamp++;
-        }
+        // for (var i = 0; i < entries; i++) {
+        //     for (var j = 0; j < this.layers; j++) {
+        //         history[j].values.push({time: this.timestamp, y: this.rand(this.bounds[j])});
+        //     }
+        //     this.timestamp++;
+        // }
 
         return history;
     };
@@ -21064,11 +21064,11 @@ var chart = undefined;
 var chartHelper = new function() {
     
     this.initChart = function() {
-        var data = new RealTimeData(3);
+        var data = new RealTimeData(1);
 
         chart = $('#noiseChart').epoch({
             type: 'time.bar',
-            data: data.history(),
+            data: data.history(0),
             axes: [
                 //'left', 
                 //'bottom'
@@ -21076,13 +21076,13 @@ var chartHelper = new function() {
             ]
         });
     
-        setInterval(function() { chart.push(data.next()); }, 1000);
-        chart.push(data.next());
+        setInterval(function() { this.pushData(data.next()); }, 1000);
+        this.pushData(data.next());
     };
 
-    // this.pushData = function (data) {
-    //     chart.push(data.next());
-    // };
+    this.pushData = function (data) {
+        chart.push(data);
+    };
 }
 
 function pushData(data) {
