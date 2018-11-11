@@ -2,11 +2,9 @@
   <div class="row my-4">
     
     <div class="col-sm-5">
-      <div class="row" *ngIf="message">
-        <div class="col-2">
-            <img id="profile-img" 
-              class="profile-img-card" 
-              [src]="getAvatar()">
+      <div class="row" style="align-items: center;" *ngIf="message">
+        <div class="col-3">
+          <img id="profile-img" class="w-100" [src]="getAvatar()">
         </div>
         <div class="col">
           <div class="card p-1">

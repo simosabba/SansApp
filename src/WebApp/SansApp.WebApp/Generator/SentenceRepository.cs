@@ -21,12 +21,12 @@ namespace SansApp.WebApp.Generator
                 User = "simo",
                 Sentence = "aaa"
             },
-            new Message
-            {
-                AvatarIcon = "/app/assets/img/avatars/leo.png",
-                User = "leo",
-                Sentence = "aaa"
-            },
+            //new Message
+            //{
+            //    AvatarIcon = "/app/assets/img/avatars/leo.png",
+            //    User = "leo",
+            //    Sentence = "aaa"
+            //},
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/ludo.png",
@@ -49,12 +49,12 @@ namespace SansApp.WebApp.Generator
                 User = "simo",
                 Sentence = "aaa"
             },
-            new Message
-            {
-                AvatarIcon = "/app/assets/img/avatars/leo.png",
-                User = "leo",
-                Sentence = "aaa"
-            },
+            //new Message
+            //{
+            //    AvatarIcon = "/app/assets/img/avatars/leo.png",
+            //    User = "leo",
+            //    Sentence = "aaa"
+            //},
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/ludo.png",
@@ -77,12 +77,12 @@ namespace SansApp.WebApp.Generator
                 User = "simo",
                 Sentence = "aaa"
             },
-            new Message
-            {
-                AvatarIcon = "/app/assets/img/avatars/leo.png",
-                User = "leo",
-                Sentence = "aaa"
-            },
+            //new Message
+            //{
+            //    AvatarIcon = "/app/assets/img/avatars/leo.png",
+            //    User = "leo",
+            //    Sentence = "aaa"
+            //},
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/ludo.png",

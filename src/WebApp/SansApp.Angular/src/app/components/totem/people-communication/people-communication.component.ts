@@ -51,9 +51,9 @@ export class PeopleCommunicationComponent implements OnInit {
       return '';
     }
 
-    if (!this.message.avatarIcon) {
-      return '/app/assets/img/accounts/avatar_2x.png';
-    }
+    // if (!this.message.avatarIcon) {
+    //   return '/app/assets/img/accounts/avatar_2x.png';
+    // }
 
     return this.message.avatarIcon;
   }
