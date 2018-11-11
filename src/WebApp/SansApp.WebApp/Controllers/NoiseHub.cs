@@ -9,8 +9,12 @@ namespace SansApp.WebApp.Controllers
 {
     public class NoiseHub : Hub
     {
+        private static object LockObj = new object();
+
         public static bool IsStarted = false;
         public static double Value = 50;
+        public static double RealValue = 50;
+        public static List<double> HistoricalValues = new List<double>();
 
         public NoiseHub()
         {
@@ -39,9 +43,25 @@ namespace SansApp.WebApp.Controllers
 
         public async Task GetValue()
         {
-            var rand = new Random().Next(20) * 0.1;
-            var n = Value - 1.0 + rand;
-            await Clients.Caller.SendAsync("ReceiveNewSample", n);
+            double value;
+            double avg;
+
+            lock (LockObj)
+            {
+                //fake noise
+                var rand = new Random().Next(20) * 0.1;
+                RealValue = Value - 1.0 + rand;
+
+                //max retention
+                HistoricalValues.Add(RealValue);
+                if (HistoricalValues.Count > 20)
+                    HistoricalValues = HistoricalValues.Skip(HistoricalValues.Count - 20).ToList();
+
+                value = RealValue;
+                avg = HistoricalValues.Average();
+            }
+
+            await Clients.Caller.SendAsync("ReceiveNewSample", value, avg);
         }
 
         private async Task SendValue()
