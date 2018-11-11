@@ -285,6 +285,7 @@ var NoiseChartComponent = /** @class */ (function () {
     NoiseChartComponent.prototype.subscribeSamples = function () {
         this.noiseService.noiseSampleReceived.subscribe(function (value) {
             console.log('New noise sample: ', value);
+            // chartHelper.pushData({ time: ((new Date()).getTime() / 1000), y: value});
         });
     };
     NoiseChartComponent = __decorate([

@@ -21063,14 +21063,12 @@ if (window.Zepto != null) {
 var chart = undefined;
 var chartHelper = new function() {
     
-    chart = undefined;
     this.initChart = function() {
-        //var data = new RealTimeData(3);
+        var data = new RealTimeData(3);
 
         chart = $('#noiseChart').epoch({
             type: 'time.bar',
-            data: [],
-                //data.history(),
+            data: data.history(),
             axes: [
                 //'left', 
                 //'bottom'
@@ -21078,15 +21076,18 @@ var chartHelper = new function() {
             ]
         });
     
-        // setInterval(function() { chart.push(data.next()); }, 1000);
-        // chart.push(data.next());
-    };
-
-    this.pushData = function (data) {
+        setInterval(function() { chart.push(data.next()); }, 1000);
         chart.push(data.next());
     };
+
+    // this.pushData = function (data) {
+    //     chart.push(data.next());
+    // };
 }
 
+function pushData(data) {
+    chart.push(data);
+}
 
 
 ;(function ($) {

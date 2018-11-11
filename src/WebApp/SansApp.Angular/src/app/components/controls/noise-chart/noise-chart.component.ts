@@ -36,6 +36,7 @@ export class NoiseChartComponent implements OnInit, AfterViewInit {
   private subscribeSamples() {
     this.noiseService.noiseSampleReceived.subscribe((value: number) => {
       console.log('New noise sample: ', value);
+      // chartHelper.pushData({ time: ((new Date()).getTime() / 1000), y: value});
     });
   }
 }
