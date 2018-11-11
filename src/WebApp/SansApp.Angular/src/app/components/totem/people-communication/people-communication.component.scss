@@ -6,14 +6,33 @@
   border-radius: 50%;
 }
 
+#spiegazione {
+  width: 360px;
+  height: 280px;
+  background-image: url('/assets/img/components/spiegazione.png');
+  background-size: cover;
+
+  .dbAvg {
+    padding-left: 36px;
+    padding-top: 206px;
+
+    .digit {
+      padding-left: 30px;
+      font-size: 36px;
+    }
+  }
+}
+
 #shh-counter {
-  width: 150px;
-  height: 35px;
-  background-image: url('/assets/img/components/contatore-sm.png');
+  width: 350px;
+  height: 100px;
+  padding-left: 150px;
+  padding-top: 24px;
+  background-image: url('/assets/img/components/shh-counter-2.png');
   background-size: cover;
 
   .digit {
-    padding-left: 19px;
-    font-size: 28px;
+    padding-left: 26px;
+    font-size: 36px;
   }
 }

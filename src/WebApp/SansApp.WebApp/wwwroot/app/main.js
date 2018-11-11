@@ -357,9 +357,9 @@ var NoiseChartComponent = /** @class */ (function () {
                 }
             }, 1000);
         }, 3000);
-        this.noiseService.noiseSampleReceived.subscribe(function (value) {
-            console.log('New noise sample: ', value);
-            dbValue = value;
+        this.noiseService.noiseSampleReceived.subscribe(function (sample) {
+            console.log('New noise sample: ', sample);
+            dbValue = sample.value;
         });
     };
     NoiseChartComponent = __decorate([
@@ -778,7 +778,7 @@ var ControlComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid align-self-start flex-fill\">\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row\">\n    <div class=\"col-md-10 offset-md-1\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
+module.exports = "\n<div class=\"container-fluid align-self-start flex-fill\">\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-10\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row\">\n    <div class=\"col-md-10 offset-md-1\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -922,7 +922,7 @@ var SendMessageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <!-- <div class=\"footer\">\n        <app-footer></app-footer>\n      </div> -->\n  \n    </div>\n  \n  </div>"
+module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <!-- <app-header class=\"header\"></app-header> -->\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <!-- <div class=\"footer\">\n        <app-footer></app-footer>\n      </div> -->\n  \n    </div>\n  \n  </div>"
 
 /***/ }),
 
@@ -1052,7 +1052,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-4\">\n    \n    <div class=\"col-sm-5\">\n      <div class=\"row\" style=\"align-items: center;\" *ngIf=\"message\">\n        <div class=\"col-3\">\n          <img id=\"profile-img\" class=\"w-100\" [src]=\"getAvatar()\">\n        </div>\n        <div class=\"col\">\n          <div class=\"card p-1\">\n            <strong>{{message.user}}</strong>\n            <div>\n              {{message.sentence}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-4 offset-sm-3\">\n      <div id=\"shh-counter\">\n        <span class=\"digit\">{{getShhCypher(4)}}</span>\n        <span class=\"digit\">{{getShhCypher(3)}}</span>\n        <span class=\"digit\">{{getShhCypher(2)}}</span>\n        <span class=\"digit\">{{getShhCypher(1)}}</span>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"chat-container mt-3\">\n  <div class=\"row my-4\">\n\n    <div class=\"col-sm-4\" style=\"align-items: center;\">\n      <div id=\"spiegazione\">\n        <div class=\"dbAvg\" *ngIf=\"dbAvg > 0\">\n          <span class=\"digit\">{{getDbAvgCypher(3)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(2)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(1)}}</span>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-5 offset-sm-2 d-flex flex-column\">\n      <div class=\"flex-fill\">\n        <div class=\"row\" style=\"align-items: center;\" *ngIf=\"message\">\n            <div class=\"col-3\">\n              <img id=\"profile-img\" class=\"w-100\" [src]=\"getAvatar()\">\n            </div>\n            <div class=\"col\">\n              <div class=\"card p-1\">\n                <strong>{{message.user}}</strong>\n                <div>\n                  {{message.sentence}}\n                </div>\n              </div>\n            </div>\n          </div>\n      </div>\n\n      <div class=\"row justify-content-center align-self-end\">\n        <div class=\"col\">\n          <div id=\"shh-counter\">\n            <span class=\"digit\">{{getShhCypher(4)}}</span>\n            <span class=\"digit\">{{getShhCypher(3)}}</span>\n            <span class=\"digit\">{{getShhCypher(2)}}</span>\n            <span class=\"digit\">{{getShhCypher(1)}}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    \n  </div>\n</div>"
 
 /***/ }),
 
@@ -1063,7 +1063,7 @@ module.exports = "<div class=\"chat-container\">\n  <div class=\"row my-4\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n#shh-counter {\n  width: 150px;\n  height: 35px;\n  background-image: url('/app/assets/img/components/contatore-sm.png');\n  background-size: cover; }\n\n#shh-counter .digit {\n    padding-left: 19px;\n    font-size: 28px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxhQUFZO0VBQ1osYUFBWTtFQUNaLHFFQUFnRTtFQUNoRSx1QkFBc0IsRUFNdkI7O0FBVkQ7SUFPSSxtQkFBa0I7SUFDbEIsZ0JBQWUsRUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gIHdpZHRoOiA1MnB4O1xyXG4gIGhlaWdodDogNTJweDtcclxuICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG5cclxuI3NoaC1jb3VudGVyIHtcclxuICB3aWR0aDogMTUwcHg7XHJcbiAgaGVpZ2h0OiAzNXB4O1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL2Fzc2V0cy9pbWcvY29tcG9uZW50cy9jb250YXRvcmUtc20ucG5nJyk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuXHJcbiAgLmRpZ2l0IHtcclxuICAgIHBhZGRpbmctbGVmdDogMTlweDtcclxuICAgIGZvbnQtc2l6ZTogMjhweDtcclxuICB9XHJcbn0iXX0= */"
+module.exports = ".profile-img-card {\n  width: 52px;\n  height: 52px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n#spiegazione {\n  width: 360px;\n  height: 280px;\n  background-image: url('/app/assets/img/components/spiegazione.png');\n  background-size: cover; }\n\n#spiegazione .dbAvg {\n    padding-left: 36px;\n    padding-top: 206px; }\n\n#spiegazione .dbAvg .digit {\n      padding-left: 30px;\n      font-size: 36px; }\n\n#shh-counter {\n  width: 350px;\n  height: 100px;\n  padding-left: 150px;\n  padding-top: 24px;\n  background-image: url('/app/assets/img/components/shh-counter-2.png');\n  background-size: cover; }\n\n#shh-counter .digit {\n    padding-left: 26px;\n    font-size: 36px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90b3RlbS9wZW9wbGUtY29tbXVuaWNhdGlvbi9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xcdG90ZW1cXHBlb3BsZS1jb21tdW5pY2F0aW9uXFxwZW9wbGUtY29tbXVuaWNhdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxhQUFZO0VBQ1osb0JBQW1CO0VBQ25CLGVBQWM7RUFDZCxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxhQUFZO0VBQ1osY0FBYTtFQUNiLG9FQUErRDtFQUMvRCx1QkFBc0IsRUFXdkI7O0FBZkQ7SUFPSSxtQkFBa0I7SUFDbEIsbUJBQWtCLEVBTW5COztBQWRIO01BV00sbUJBQWtCO01BQ2xCLGdCQUFlLEVBQ2hCOztBQUlMO0VBQ0UsYUFBWTtFQUNaLGNBQWE7RUFDYixvQkFBbUI7RUFDbkIsa0JBQWlCO0VBQ2pCLHNFQUFpRTtFQUNqRSx1QkFBc0IsRUFNdkI7O0FBWkQ7SUFTSSxtQkFBa0I7SUFDbEIsZ0JBQWUsRUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RvdGVtL3Blb3BsZS1jb21tdW5pY2F0aW9uL3Blb3BsZS1jb21tdW5pY2F0aW9uLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnByb2ZpbGUtaW1nLWNhcmQge1xyXG4gIHdpZHRoOiA1MnB4O1xyXG4gIGhlaWdodDogNTJweDtcclxuICBtYXJnaW46IDAgYXV0byAxMHB4O1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG5cclxuI3NwaWVnYXppb25lIHtcclxuICB3aWR0aDogMzYwcHg7XHJcbiAgaGVpZ2h0OiAyODBweDtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9hc3NldHMvaW1nL2NvbXBvbmVudHMvc3BpZWdhemlvbmUucG5nJyk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuXHJcbiAgLmRiQXZnIHtcclxuICAgIHBhZGRpbmctbGVmdDogMzZweDtcclxuICAgIHBhZGRpbmctdG9wOiAyMDZweDtcclxuXHJcbiAgICAuZGlnaXQge1xyXG4gICAgICBwYWRkaW5nLWxlZnQ6IDMwcHg7XHJcbiAgICAgIGZvbnQtc2l6ZTogMzZweDtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcbiNzaGgtY291bnRlciB7XHJcbiAgd2lkdGg6IDM1MHB4O1xyXG4gIGhlaWdodDogMTAwcHg7XHJcbiAgcGFkZGluZy1sZWZ0OiAxNTBweDtcclxuICBwYWRkaW5nLXRvcDogMjRweDtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9hc3NldHMvaW1nL2NvbXBvbmVudHMvc2hoLWNvdW50ZXItMi5wbmcnKTtcclxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG5cclxuICAuZGlnaXQge1xyXG4gICAgcGFkZGluZy1sZWZ0OiAyNnB4O1xyXG4gICAgZm9udC1zaXplOiAzNnB4O1xyXG4gIH1cclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1080,6 +1080,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Message", function() { return Message; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aspnet/signalr */ "./node_modules/@aspnet/signalr/dist/esm/index.js");
+/* harmony import */ var _services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/noise-service/noise.service */ "./src/app/services/noise-service/noise.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1091,9 +1092,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var PeopleCommunicationComponent = /** @class */ (function () {
-    function PeopleCommunicationComponent() {
+    function PeopleCommunicationComponent(noiseService) {
+        this.noiseService = noiseService;
         this.shhCount = 0;
+        this.dbAvg = 0;
     }
     PeopleCommunicationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1115,6 +1119,16 @@ var PeopleCommunicationComponent = /** @class */ (function () {
         this._hubConnection.on('ReceiveShh', function (shhCount) {
             _this.shhCount = shhCount;
         });
+        this.noiseService.noiseSampleReceived.subscribe(function (sample) {
+            _this.dbAvg = sample.avg;
+        });
+    };
+    PeopleCommunicationComponent.prototype.getDbAvgCypher = function (cypher) {
+        var a = Math.ceil(this.dbAvg);
+        return a
+            .toString()
+            .padStart(3, '0')
+            .substr(3 - cypher, 1);
     };
     PeopleCommunicationComponent.prototype.getShhCypher = function (cypher) {
         return this.shhCount
@@ -1126,9 +1140,6 @@ var PeopleCommunicationComponent = /** @class */ (function () {
         if (!this.message) {
             return '';
         }
-        // if (!this.message.avatarIcon) {
-        //   return '/app/assets/img/accounts/avatar_2x.png';
-        // }
         return this.message.avatarIcon;
     };
     PeopleCommunicationComponent = __decorate([
@@ -1137,7 +1148,7 @@ var PeopleCommunicationComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./people-communication.component.html */ "./src/app/components/totem/people-communication/people-communication.component.html"),
             styles: [__webpack_require__(/*! ./people-communication.component.scss */ "./src/app/components/totem/people-communication/people-communication.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_2__["NoiseService"]])
     ], PeopleCommunicationComponent);
     return PeopleCommunicationComponent;
 }());
@@ -1232,12 +1243,13 @@ var SoundGraphComponent = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/services/noise-service/noise.service.ts ***!
   \*********************************************************/
-/*! exports provided: NoiseService */
+/*! exports provided: NoiseService, DbSample */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoiseService", function() { return NoiseService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DbSample", function() { return DbSample; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aspnet/signalr */ "./node_modules/@aspnet/signalr/dist/esm/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -1260,15 +1272,18 @@ var NoiseService = /** @class */ (function () {
             .configureLogging(_aspnet_signalr__WEBPACK_IMPORTED_MODULE_1__["LogLevel"].Information)
             .build();
         this._hubConnection.start().catch(function (err) { return console.error(err.toString()); });
-        this._hubConnection.on('ReceiveNewSample', function (value) {
-            _this.addNoiseSample(value);
+        this._hubConnection.on('ReceiveNewSample', function (value, avg) {
+            _this.addNoiseSample(value, avg);
         });
         setInterval(function () {
             _this._hubConnection.send('GetValue');
         }, 2000);
     }
-    NoiseService.prototype.addNoiseSample = function (dbValue) {
-        this.noiseSampleReceived.emit(dbValue);
+    NoiseService.prototype.addNoiseSample = function (dbValue, dbAvg) {
+        this.noiseSampleReceived.emit({
+            value: dbValue,
+            avg: dbAvg
+        });
     };
     NoiseService.prototype.setNoiseLevel = function (dbValue) {
         this._hubConnection.send('SetValue', dbValue);
@@ -1280,6 +1295,12 @@ var NoiseService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], NoiseService);
     return NoiseService;
+}());
+
+var DbSample = /** @class */ (function () {
+    function DbSample() {
+    }
+    return DbSample;
 }());
 
 

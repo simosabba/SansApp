@@ -49,8 +49,8 @@ namespace SansApp.WebApp.Controllers
             lock (LockObj)
             {
                 //fake noise
-                var rand = new Random().Next(20) * 0.1;
-                RealValue = Value - 1.0 + rand;
+                var rand = new Random().Next(10) * 0.1;
+                RealValue = Value - 0.5 + rand;
 
                 //max retention
                 HistoricalValues.Add(RealValue);

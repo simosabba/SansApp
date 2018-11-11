@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HubConnection, HubConnectionBuilder, LogLevel } from '@aspnet/signalr';
+import { NoiseService, DbSample } from '../../../services/noise-service/noise.service';
 
 @Component({
   selector: 'app-people-communication',
@@ -14,8 +15,9 @@ export class PeopleCommunicationComponent implements OnInit {
 
   msgTime: Date;
   shhCount = 0;
+  dbAvg = 0;
 
-  constructor() { }
+  constructor(private noiseService: NoiseService) { }
 
   ngOnInit() {
     this._hubConnection = new HubConnectionBuilder()
@@ -37,6 +39,18 @@ export class PeopleCommunicationComponent implements OnInit {
     this._hubConnection.on('ReceiveShh', (shhCount: number) => {
       this.shhCount = shhCount;
     });
+
+    this.noiseService.noiseSampleReceived.subscribe((sample: DbSample) => {
+      this.dbAvg = sample.avg;
+    });
+  }
+
+  getDbAvgCypher(cypher: number) {
+    const a = Math.ceil(this.dbAvg);
+    return a
+      .toString()
+      .padStart(3, '0')
+      .substr(3 - cypher, 1);
   }
 
   getShhCypher(cypher: number) {
@@ -50,11 +64,6 @@ export class PeopleCommunicationComponent implements OnInit {
     if (!this.message) {
       return '';
     }
-
-    // if (!this.message.avatarIcon) {
-    //   return '/app/assets/img/accounts/avatar_2x.png';
-    // }
-
     return this.message.avatarIcon;
   }
 }

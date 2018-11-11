@@ -8,7 +8,7 @@ import { detachEmbeddedView } from '@angular/core/src/view';
 export class NoiseService {
 
   private _hubConnection: HubConnection;
-  noiseSampleReceived = new EventEmitter<number>();
+  noiseSampleReceived = new EventEmitter<DbSample>();
 
   constructor() {
     this._hubConnection = new HubConnectionBuilder()
@@ -16,19 +16,27 @@ export class NoiseService {
       .configureLogging(LogLevel.Information)
       .build();
     this._hubConnection.start().catch(err => console.error(err.toString()));
-    this._hubConnection.on('ReceiveNewSample', (value: number) => {
-      this.addNoiseSample(value);
+    this._hubConnection.on('ReceiveNewSample', (value: number, avg: number) => {
+      this.addNoiseSample(value, avg);
     });
     setInterval(() => {
       this._hubConnection.send('GetValue');
     }, 2000);
   }
 
-  addNoiseSample(dbValue: number) {
-    this.noiseSampleReceived.emit(dbValue);
+  addNoiseSample(dbValue: number, dbAvg: number) {
+    this.noiseSampleReceived.emit({
+      value: dbValue,
+      avg: dbAvg
+    });
   }
 
   setNoiseLevel(dbValue: number) {
     this._hubConnection.send('SetValue', dbValue);
   }
+}
+
+export class DbSample {
+  value: number;
+  avg: number;
 }
