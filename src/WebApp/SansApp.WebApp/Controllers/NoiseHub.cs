@@ -12,8 +12,8 @@ namespace SansApp.WebApp.Controllers
         private static object LockObj = new object();
 
         public static bool IsStarted = false;
-        public static double Value = 50;
-        public static double RealValue = 50;
+        public static double Value = 60;
+        public static double RealValue = 60;
         public static List<double> HistoricalValues = new List<double>();
 
         public NoiseHub()

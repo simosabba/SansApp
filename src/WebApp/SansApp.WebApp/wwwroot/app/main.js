@@ -1054,7 +1054,7 @@ var AdvBannerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-container mt-3\">\n  <div class=\"row my-4\">\n\n    <div class=\"col-sm-4\" style=\"align-items: center;\">\n      <div id=\"spiegazione\">\n        <div class=\"dbAvg\" *ngIf=\"dbAvg > 0\">\n          <span class=\"digit\">{{getDbAvgCypher(3)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(2)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(1)}}</span>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-5 offset-sm-2 d-flex flex-column\">\n      <div class=\"flex-fill\">\n\n          <div class=\"row justify-content-center align-self-end\">\n              <div class=\"col\">\n                <div id=\"shh-counter\"style=\"margin-right:0; margin-left:auto;\">\n                  <span class=\"digit\">{{getShhCypher(4)}}</span>\n                  <span class=\"digit\">{{getShhCypher(3)}}</span>\n                  <span class=\"digit\">{{getShhCypher(2)}}</span>\n                  <span class=\"digit\">{{getShhCypher(1)}}</span>\n                </div>\n              </div>\n            </div>\n        \n\n\n      </div>\n\n      <div class=\"row\" style=\"align-items: center;\" *ngIf=\"message\">\n          <div class=\"col-3\">\n            <img id=\"profile-img\" class=\"w-100\" [src]=\"getAvatar()\">\n          </div>\n          <div class=\"col\">\n            <div class=\"card p-1\">\n              <strong>{{message.user}}</strong>\n              <div>\n                {{message.sentence}}\n              </div>\n            </div>\n          </div>\n        </div>\n\n    </div>\n\n  </div>\n</div>"
+module.exports = "<div class=\"chat-container mt-3\">\n  <div class=\"row my-4\">\n\n    <div class=\"col-sm-4\" style=\"align-items: center;\">\n      <div id=\"spiegazione\">\n        <div class=\"dbAvg\" *ngIf=\"dbAvg > 0\">\n          <span class=\"digit\">{{getDbAvgCypher(3)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(2)}}</span>\n          <span class=\"digit\">{{getDbAvgCypher(1)}}</span>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-5 offset-sm-2 d-flex flex-column\">\n      <div class=\"flex-fill\">\n\n          <div class=\"row justify-content-center align-self-end\">\n              <div class=\"col\">\n                <div id=\"shh-counter\"style=\"margin-right:0; margin-left:auto;\">\n                  <span class=\"digit\">{{getShhCypher(4)}}</span>\n                  <span class=\"digit\">{{getShhCypher(3)}}</span>\n                  <span class=\"digit\">{{getShhCypher(2)}}</span>\n                  <span class=\"digit\">{{getShhCypher(1)}}</span>\n                </div>\n              </div>\n            </div>\n        \n\n\n      </div>\n\n      <div class=\"row\" style=\"align-items: center;\" *ngIf=\"message\">\n          <div class=\"col-3\">\n            <img id=\"profile-img\" class=\"w-100\" [src]=\"getAvatar()\">\n          </div>\n          <div class=\"col\">\n            <div class=\"card p-1\">\n              <strong>{{message.user}}</strong>\n              <div>\n                {{message.sentence}}\n              </div>\n            </div>\n          </div>\n        </div>\n\n    </div>\n\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-sm-2 offset-sm-5\" style=\"max-width: 150px;\">\n      <img class=\"w-100\" [src]=\"getShhImage()\" *ngIf=\"getShhImage()\">\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1099,6 +1099,7 @@ var PeopleCommunicationComponent = /** @class */ (function () {
     function PeopleCommunicationComponent(noiseService) {
         this.noiseService = noiseService;
         this.shhCount = 0;
+        this.shhLevel = -1;
         this.dbAvg = 0;
     }
     PeopleCommunicationComponent.prototype.ngOnInit = function () {
@@ -1120,10 +1121,25 @@ var PeopleCommunicationComponent = /** @class */ (function () {
         });
         this._hubConnection.on('ReceiveShh', function (shhCount) {
             _this.shhCount = shhCount;
+            _this.shhLevel++;
         });
+        setInterval(function () {
+            var newLevel = _this.shhLevel - 10;
+            if (newLevel < 0) {
+                newLevel = 0;
+            }
+            _this.shhLevel = newLevel;
+        }, 6000);
         this.noiseService.noiseSampleReceived.subscribe(function (sample) {
             _this.dbAvg = sample.avg;
         });
+    };
+    PeopleCommunicationComponent.prototype.getShhImage = function () {
+        if (this.shhLevel < 1) {
+            return '';
+        }
+        var level = Math.ceil(this.shhLevel / 10);
+        return '/app/assets/img/components/shh-' + level.toString() + '.png';
     };
     PeopleCommunicationComponent.prototype.getDbAvgCypher = function (cypher) {
         var a = Math.ceil(this.dbAvg);

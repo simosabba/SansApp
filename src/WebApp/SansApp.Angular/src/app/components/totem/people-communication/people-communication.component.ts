@@ -15,6 +15,7 @@ export class PeopleCommunicationComponent implements OnInit {
 
   msgTime: Date;
   shhCount = 0;
+  shhLevel = -1;
   dbAvg = 0;
 
   constructor(private noiseService: NoiseService) { }
@@ -38,11 +39,28 @@ export class PeopleCommunicationComponent implements OnInit {
 
     this._hubConnection.on('ReceiveShh', (shhCount: number) => {
       this.shhCount = shhCount;
+      this.shhLevel++;
     });
+
+    setInterval(() => {
+      let newLevel = this.shhLevel - 10;
+      if (newLevel < 0) {
+        newLevel = 0;
+      }
+      this.shhLevel = newLevel;
+    }, 6000);
 
     this.noiseService.noiseSampleReceived.subscribe((sample: DbSample) => {
       this.dbAvg = sample.avg;
     });
+  }
+
+  getShhImage() {
+    if (this.shhLevel < 1) {
+      return '';
+    }
+    const level = Math.ceil(this.shhLevel / 10);
+    return '/app/assets/img/components/shh-' + level.toString() + '.png';
   }
 
   getDbAvgCypher(cypher: number) {
