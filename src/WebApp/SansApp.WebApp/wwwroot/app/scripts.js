@@ -21068,7 +21068,7 @@ var chartHelper = new function() {
         var data = new RealTimeData(1);
 
         chart = $('#noiseChart').epoch({
-            type: 'time.bar',
+            type: 'time.line',
             data: data.history(0),
             axes: [
                 //'left', 
