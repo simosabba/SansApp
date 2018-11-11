@@ -17,6 +17,7 @@ import { ControlComponent } from './components/pages/control/control.component';
 import { NoiseChartComponent } from './components/controls/noise-chart/noise-chart.component';
 import { AdmComponent } from './components/pages/adm/adm.component';
 import { NoiseControlComponent } from './components/controls/noise-control/noise-control.component';
+import { ChatComponent } from './components/chat/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NoiseControlComponent } from './components/controls/noise-control/noise
     ControlComponent,
     NoiseChartComponent,
     AdmComponent,
-    NoiseControlComponent
+    NoiseControlComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ namespace SansApp.WebApp.Controllers
                 {
                     User = user,
                     Sentence = message,
-                }, new Guid().ToString());
+                }, Guid.NewGuid().ToString());
         }
 
         public override async Task OnConnectedAsync()
@@ -37,7 +37,7 @@ namespace SansApp.WebApp.Controllers
         {
             var message = _generator.GenerateMessage(NoiseHub.RealValue);
 
-            await Clients.All.SendAsync("ReceiveMessage", message, new Guid().ToString());
+            await Clients.All.SendAsync("ReceiveMessage", message, Guid.NewGuid().ToString());
         }
     }
 }

@@ -8,7 +8,7 @@ import { ControlComponent } from './components/pages/control/control.component';
 
 const routes: Routes = [
   { path: '', component: TotemComponent},
-  { path: 'chat', component: ControlComponent},
+  { path: 'shh', component: ControlComponent},
   { path: 'admin', component: AdmComponent},
 ];
 

@@ -51,7 +51,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var routes = [
     { path: '', component: _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_1__["TotemComponent"] },
-    { path: 'chat', component: _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_4__["ControlComponent"] },
+    { path: 'shh', component: _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_4__["ControlComponent"] },
     { path: 'admin', component: _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_0__["AdmComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -165,12 +165,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/controls/noise-chart/noise-chart.component */ "./src/app/components/controls/noise-chart/noise-chart.component.ts");
 /* harmony import */ var _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/pages/adm/adm.component */ "./src/app/components/pages/adm/adm.component.ts");
 /* harmony import */ var _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/controls/noise-control/noise-control.component */ "./src/app/components/controls/noise-control/noise-control.component.ts");
+/* harmony import */ var _components_chat_chat_chat_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/chat/chat/chat.component */ "./src/app/components/chat/chat/chat.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -208,7 +210,8 @@ var AppModule = /** @class */ (function () {
                 _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_14__["ControlComponent"],
                 _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__["NoiseChartComponent"],
                 _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__["AdmComponent"],
-                _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__["NoiseControlComponent"]
+                _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__["NoiseControlComponent"],
+                _components_chat_chat_chat_component__WEBPACK_IMPORTED_MODULE_18__["ChatComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -220,6 +223,69 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/chat/chat/chat.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/components/chat/chat/chat.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  chat works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/chat/chat/chat.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/components/chat/chat/chat.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY2hhdC9jaGF0L2NoYXQuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/chat/chat/chat.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/components/chat/chat/chat.component.ts ***!
+  \********************************************************/
+/*! exports provided: ChatComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatComponent", function() { return ChatComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ChatComponent = /** @class */ (function () {
+    function ChatComponent() {
+    }
+    ChatComponent.prototype.ngOnInit = function () {
+    };
+    ChatComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-chat',
+            template: __webpack_require__(/*! ./chat.component.html */ "./src/app/components/chat/chat/chat.component.html"),
+            styles: [__webpack_require__(/*! ./chat.component.scss */ "./src/app/components/chat/chat/chat.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ChatComponent);
+    return ChatComponent;
 }());
 
 
@@ -775,7 +841,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div>\n\n      <div class=\"card p-3 text-center\">\n          <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <!-- <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div> -->\n\n      <div class=\"card p-3 text-center\">\n          <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
