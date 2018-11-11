@@ -11,7 +11,11 @@
       </div>
     </div>
     
-    <div class="col-sm-5 offset-sm-2 d-flex flex-column">
+    <div class="col-sm-2 offset-sm-1">
+      <img class="w-100" [src]="getShhImage()" *ngIf="getShhImage()">
+    </div>
+
+    <div class="col-sm-5 d-flex flex-column">
       <div class="flex-fill">
 
           <div class="row justify-content-center align-self-end">
@@ -47,9 +51,4 @@
 
   </div>
 
-  <div class="row">
-    <div class="col-sm-2 offset-sm-5" style="max-width: 150px;">
-      <img class="w-100" [src]="getShhImage()" *ngIf="getShhImage()">
-    </div>
-  </div>
 </div>

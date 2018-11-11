@@ -43,7 +43,7 @@ export class PeopleCommunicationComponent implements OnInit {
     });
 
     setInterval(() => {
-      let newLevel = this.shhLevel - 10;
+      let newLevel = this.shhLevel - 5;
       if (newLevel < 0) {
         newLevel = 0;
       }
