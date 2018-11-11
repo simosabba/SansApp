@@ -21059,7 +21059,9 @@ if (window.Zepto != null) {
 
 })();
 
+
 var chartHelper = new function() {
+    
     this.initChart = function() {
         var data = new RealTimeData(3);
 

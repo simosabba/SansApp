@@ -265,6 +265,9 @@ var NoiseChartComponent = /** @class */ (function () {
     }
     NoiseChartComponent.prototype.ngOnInit = function () {
     };
+    NoiseChartComponent.prototype.ngAfterViewInit = function () {
+        //chartHelper.initChart();
+    };
     NoiseChartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-noise-chart',
