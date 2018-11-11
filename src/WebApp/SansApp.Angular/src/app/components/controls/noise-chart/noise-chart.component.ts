@@ -15,6 +15,5 @@ export class NoiseChartComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    
   }
 }

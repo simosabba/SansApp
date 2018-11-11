@@ -21081,17 +21081,15 @@ var chartHelper = new function() {
 }
 
 var chartInitialized = false;
-
-$(function() {
-
-});
-
-setTimeout(function () {
-    if (!chartInitialized && $('#noiseChart')) {
-        chartHelper.initChart();
-        chartInitialized = true;
-    }
+setTimeout(() => {
+    setInterval(function () {
+        if (!chartInitialized && $('#noiseChart')) {
+            chartHelper.initChart();
+            chartInitialized = true;
+        }
+    }, 1000);
 }, 5000);
+
 
 ;(function ($) {
   "use strict"; // Start of use strict
