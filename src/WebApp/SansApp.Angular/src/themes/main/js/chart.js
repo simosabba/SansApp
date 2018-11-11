@@ -136,12 +136,14 @@
 })();
 
 
+var chart = undefined;
 var chartHelper = new function() {
     
+    chart = undefined;
     this.initChart = function() {
         var data = new RealTimeData(3);
 
-        var chart = $('#noiseChart').epoch({
+        chart = $('#noiseChart').epoch({
             type: 'time.bar',
             data: data.history(),
             axes: [
@@ -153,16 +155,11 @@ var chartHelper = new function() {
     
         setInterval(function() { chart.push(data.next()); }, 1000);
         chart.push(data.next());
-    }
+    };
+
+    this.pushData = function (data) {
+        chart.push(data.next());
+    };
 }
 
-var chartInitialized = false;
-setTimeout(() => {
-    setInterval(function () {
-        if (!chartInitialized && $('#noiseChart')) {
-            chartHelper.initChart();
-            chartInitialized = true;
-        }
-    }, 1000);
-}, 5000);
 

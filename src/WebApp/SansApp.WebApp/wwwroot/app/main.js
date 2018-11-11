@@ -266,6 +266,15 @@ var NoiseChartComponent = /** @class */ (function () {
     NoiseChartComponent.prototype.ngOnInit = function () {
     };
     NoiseChartComponent.prototype.ngAfterViewInit = function () {
+        var chartInitialized = false;
+        setTimeout(function () {
+            setInterval(function () {
+                if (!chartInitialized && $('#noiseChart')) {
+                    chartHelper.initChart();
+                    chartInitialized = true;
+                }
+            }, 1000);
+        }, 3000);
     };
     NoiseChartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
