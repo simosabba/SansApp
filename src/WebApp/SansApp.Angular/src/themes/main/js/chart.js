@@ -144,10 +144,27 @@ var chartHelper = new function() {
         var chart = $('#noiseChart').epoch({
             type: 'time.bar',
             data: data.history(),
-            axes: ['left', 'bottom', 'right']
+            axes: [
+                //'left', 
+                //'bottom'
+                //'right'
+            ]
         });
     
         setInterval(function() { chart.push(data.next()); }, 1000);
         chart.push(data.next());
     }
 }
+
+var chartInitialized = false;
+
+$(function() {
+
+});
+
+setTimeout(function () {
+    if (!chartInitialized && $('#noiseChart')) {
+        chartHelper.initChart();
+        chartInitialized = true;
+    }
+}, 5000);
