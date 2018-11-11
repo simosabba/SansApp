@@ -19,9 +19,16 @@ export class NoiseService {
     this._hubConnection.on('ReceiveNewSample', (value: number) => {
       this.addNoiseSample(value);
     });
+    setInterval(() => {
+      this._hubConnection.send('GetValue');
+    }, 2000);
   }
 
   addNoiseSample(dbValue: number) {
     this.noiseSampleReceived.emit(dbValue);
+  }
+
+  setNoiseLevel(dbValue: number) {
+    this._hubConnection.send('SetValue', dbValue);
   }
 }

@@ -15,6 +15,8 @@ import { SendMessageComponent } from './components/pages/send-message/send-messa
 import { TotemComponent } from './components/pages/totem/totem.component';
 import { ControlComponent } from './components/pages/control/control.component';
 import { NoiseChartComponent } from './components/controls/noise-chart/noise-chart.component';
+import { AdmComponent } from './components/pages/adm/adm.component';
+import { NoiseControlComponent } from './components/controls/noise-control/noise-control.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NoiseChartComponent } from './components/controls/noise-chart/noise-cha
     SendMessageComponent,
     TotemComponent,
     ControlComponent,
-    NoiseChartComponent
+    NoiseChartComponent,
+    AdmComponent,
+    NoiseControlComponent
   ],
   imports: [
     BrowserModule,

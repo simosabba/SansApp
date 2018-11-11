@@ -1,3 +1,4 @@
+import { AdmComponent } from './components/pages/adm/adm.component';
 import { TotemComponent } from './components/pages/totem/totem.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,6 +9,7 @@ import { ControlComponent } from './components/pages/control/control.component';
 const routes: Routes = [
   { path: '', component: TotemComponent},
   { path: 'chat', component: ControlComponent},
+  { path: 'admin', component: AdmComponent},
 ];
 
 

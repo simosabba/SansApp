@@ -33,10 +33,11 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
+/* harmony import */ var _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/pages/adm/adm.component */ "./src/app/components/pages/adm/adm.component.ts");
+/* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,17 +48,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: '', component: _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_0__["TotemComponent"] },
-    { path: 'chat', component: _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_3__["ControlComponent"] },
+    { path: '', component: _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_1__["TotemComponent"] },
+    { path: 'chat', component: _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_4__["ControlComponent"] },
+    { path: 'admin', component: _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_0__["AdmComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -160,12 +163,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/totem/totem.component */ "./src/app/components/pages/totem/totem.component.ts");
 /* harmony import */ var _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/control/control.component */ "./src/app/components/pages/control/control.component.ts");
 /* harmony import */ var _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/controls/noise-chart/noise-chart.component */ "./src/app/components/controls/noise-chart/noise-chart.component.ts");
+/* harmony import */ var _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/pages/adm/adm.component */ "./src/app/components/pages/adm/adm.component.ts");
+/* harmony import */ var _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/controls/noise-control/noise-control.component */ "./src/app/components/controls/noise-control/noise-control.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -199,7 +206,9 @@ var AppModule = /** @class */ (function () {
                 _components_pages_send_message_send_message_component__WEBPACK_IMPORTED_MODULE_12__["SendMessageComponent"],
                 _components_pages_totem_totem_component__WEBPACK_IMPORTED_MODULE_13__["TotemComponent"],
                 _components_pages_control_control_component__WEBPACK_IMPORTED_MODULE_14__["ControlComponent"],
-                _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__["NoiseChartComponent"]
+                _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__["NoiseChartComponent"],
+                _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__["AdmComponent"],
+                _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__["NoiseControlComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -224,7 +233,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"noiseChart\" class=\"epoch w-100\" style=\"min-height: 500px;\"></div>"
+module.exports = "<div id=\"noiseChart\" class=\"epoch w-100\" style=\"min-height: 350px;\"></div>"
 
 /***/ }),
 
@@ -296,6 +305,76 @@ var NoiseChartComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__["NoiseService"]])
     ], NoiseChartComponent);
     return NoiseChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/controls/noise-control/noise-control.component.html":
+/*!********************************************************************************!*\
+  !*** ./src/app/components/controls/noise-control/noise-control.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container h-100 align-self-center\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-8\">\n        <div class=\"card p-3 my-4\">\n          <h3 class=\"text-center\">dB</h3>\n          <input [(ngModel)]=\"dbValue\" type=\"number\" (change)=\"updateDbValue()\" class=\"form-control\">\n        </div>\n      </div>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/controls/noise-control/noise-control.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/app/components/controls/noise-control/noise-control.component.scss ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvY29udHJvbHMvbm9pc2UtY29udHJvbC9ub2lzZS1jb250cm9sLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/controls/noise-control/noise-control.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/controls/noise-control/noise-control.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: NoiseControlComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoiseControlComponent", function() { return NoiseControlComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/noise-service/noise.service */ "./src/app/services/noise-service/noise.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NoiseControlComponent = /** @class */ (function () {
+    function NoiseControlComponent(noiseService) {
+        this.noiseService = noiseService;
+        this.dbValue = 50;
+    }
+    NoiseControlComponent.prototype.ngOnInit = function () {
+    };
+    NoiseControlComponent.prototype.updateDbValue = function () {
+        this.noiseService.setNoiseLevel(this.dbValue);
+    };
+    NoiseControlComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-noise-control',
+            template: __webpack_require__(/*! ./noise-control.component.html */ "./src/app/components/controls/noise-control/noise-control.component.html"),
+            styles: [__webpack_require__(/*! ./noise-control.component.scss */ "./src/app/components/controls/noise-control/noise-control.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__["NoiseService"]])
+    ], NoiseControlComponent);
+    return NoiseControlComponent;
 }());
 
 
@@ -492,6 +571,73 @@ var LoaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/pages/adm/adm.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/pages/adm/adm.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-noise-control class=\"d-flex flex-fill flex-column\"></app-noise-control>\n      </div>\n  \n      <div class=\"footer\">\n        <app-footer></app-footer>\n      </div>\n  \n    </div>\n  \n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/adm/adm.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/components/pages/adm/adm.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy9hZG0vQzpcXFVzZXJzXFxTaW1vbmVcXHNvdXJjZVxccmVwb3NcXFNhbnNBcHBcXHNyY1xcV2ViQXBwXFxTYW5zQXBwLkFuZ3VsYXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXHBhZ2VzXFxhZG1cXGFkbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3BhZ2VzL2FkbS9hZG0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnBhZ2Uge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICB9XHJcbiAgXHJcbiAgLmNvbnRlbnQge1xyXG4gICAgZmxleDogMSAwIGF1dG87XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICB9XHJcbiAgXHJcbiAgLmhlYWRlciB7XHJcbiAgICBmbGV4OiAwIDEgYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLmZvb3RlciB7XHJcbiAgICBmbGV4LXNocmluazogMDtcclxuICB9XHJcbiAgIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/pages/adm/adm.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/pages/adm/adm.component.ts ***!
+  \*******************************************************/
+/*! exports provided: AdmComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdmComponent", function() { return AdmComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AdmComponent = /** @class */ (function () {
+    function AdmComponent() {
+        this.isAppReady = false;
+    }
+    AdmComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.isAppReady = true;
+        }, 1500);
+    };
+    AdmComponent.prototype.isLoading = function () {
+        return !this.isAppReady;
+    };
+    AdmComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-adm',
+            template: __webpack_require__(/*! ./adm.component.html */ "./src/app/components/pages/adm/adm.component.html"),
+            styles: [__webpack_require__(/*! ./adm.component.scss */ "./src/app/components/pages/adm/adm.component.scss")]
+        })
+    ], AdmComponent);
+    return AdmComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/pages/control/control.component.html":
 /*!*****************************************************************!*\
   !*** ./src/app/components/pages/control/control.component.html ***!
@@ -566,7 +712,7 @@ var ControlComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid align-self-start\">\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end flex-fill\">\n\n  <div class=\"row\">\n    <div class=\"col-md-10 offset-md-1\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
+module.exports = "\n<div class=\"container-fluid align-self-start flex-fill\">\n  <div class=\"row align-items-start justify-content-center\">\n    <div class=\"col-md-8\">\n      <app-people-communication></app-people-communication>\n    </div>\n  </div>\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row\">\n    <div class=\"col-md-10 offset-md-1\">\n      <app-sound-graph></app-sound-graph>\n    </div>\n  </div>\n\n</div>\n\n<div class=\"container-fluid justify-content-center align-self-end\">\n\n  <div class=\"row justify-content-center\">\n      <div class=\"col\">\n        <div class=\"carousel slide text-center\" data-ride=\"carousel\">\n            <div class=\"carousel-inner\">\n              <div class=\"carousel-item active\">\n                <div class=\"d-block w-100\">\n                    <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n              <div class=\"carousel-item\">\n                  <div class=\"d-block w-100\">\n                      <img src=\"/app/assets/img/banners/utra-banner-2.PNG\">\n                  </div>\n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -710,7 +856,7 @@ var SendMessageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <div class=\"footer\">\n        <app-footer></app-footer>\n      </div>\n  \n    </div>\n  \n  </div>"
+module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <app-header class=\"header\"></app-header>\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <!-- <div class=\"footer\">\n        <app-footer></app-footer>\n      </div> -->\n  \n    </div>\n  \n  </div>"
 
 /***/ }),
 
@@ -1045,9 +1191,15 @@ var NoiseService = /** @class */ (function () {
         this._hubConnection.on('ReceiveNewSample', function (value) {
             _this.addNoiseSample(value);
         });
+        setInterval(function () {
+            _this._hubConnection.send('GetValue');
+        }, 2000);
     }
     NoiseService.prototype.addNoiseSample = function (dbValue) {
         this.noiseSampleReceived.emit(dbValue);
+    };
+    NoiseService.prototype.setNoiseLevel = function (dbValue) {
+        this._hubConnection.send('SetValue', dbValue);
     };
     NoiseService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
