@@ -11,8 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SansApp.WebApp", "src\WebAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{27F6328B-4486-4869-A681-2BA546DD06CE}"
 	ProjectSection(SolutionItems) = preProject
+		scripts\CrowdData.ps1 = scripts\CrowdData.ps1
 		scripts\ImportData.ps1 = scripts\ImportData.ps1
 		InsertData.sql = InsertData.sql
+		scripts\SearchBars.ps1 = scripts\SearchBars.ps1
 	EndProjectSection
 EndProject
 Global

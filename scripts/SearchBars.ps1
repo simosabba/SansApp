@@ -39,6 +39,31 @@ function Search-Places
 {
 param($Latitude, $Longitude, $Radius, $PlaceType)
 
+	$Results = @()
+	$PageToken = ""
+
+	while($true)
+	{
+		Write-Host ""
+		Write-Host "Processing page $PageToken"
+		
+		$NearbySearchUrl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=YOUR_API_KEY" -f ($Latitude.ToString().Replace(",", ".")), ($Longitude.ToString().Replace(",", ".")), $Radius, $PlaceType, $ApiKey, $PageToken
+		$NearbyResponse = Invoke-RestMethod $NearbySearchUrl
+		
+		$NearbyResponse.results | %{ $Results += (Process-NearbyResult -Result $_) }
+		
+		if ([string]::IsNullOrEmpty($NearbyResponse.next_page_token) -or ($PageToken -eq $NearbyResponse.next_page_token))
+			{ break }
+		
+		$PageToken = $NearbyResponse.next_page_token
+	}
+	
+	return $Results
+}
+
+function Search-Places
+{
+param($Latitude, $Longitude, $Radius, $PlaceType)
 
 	$Results = @()
 	$PageToken = ""
@@ -47,6 +72,7 @@ param($Latitude, $Longitude, $Radius, $PlaceType)
 	{
 		Write-Host ""
 		Write-Host "Processing page $PageToken"
+
 		$NearbySearchUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={0},{1}&radius={2}&type={3}&key={4}&pagetoken={5}" -f ($Latitude.ToString().Replace(",", ".")), ($Longitude.ToString().Replace(",", ".")), $Radius, $PlaceType, $ApiKey, $PageToken
 		$NearbyResponse = Invoke-RestMethod $NearbySearchUrl
 		

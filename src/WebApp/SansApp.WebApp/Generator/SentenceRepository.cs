@@ -13,31 +13,31 @@ namespace SansApp.WebApp.Generator
             {
                 AvatarIcon = "/app/assets/img/avatars/osho.png",
                 User = "osho",
-                Sentence = "In una società migliore, formata da persone comprensive, nessuno potrà cambiarti!!"
+                Sentence = "In a better society, made of understanding people, nobody will change you!!"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/simo.png",
                 User = "simo",
-                Sentence = "Finalmente si può dormire e domani lavoererò al 100%"
+                Sentence = "At last I can sleep and tomorrow I'll perform great"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/leo.png",
                 User = "leo",
-                Sentence = "Finalmente il quartiere che amo è rispettato"
+                Sentence = "Finally the district I love is respected"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/ludo.png",
                 User = "ludo",
-                Sentence = "Ora il mio bambino riesce a dormire. Grazie per il vostro rispetto"
+                Sentence = "Now my baby can sleep. Thank you!!"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/gio.png",
                 User = "gio",
-                Sentence = "Grazie!! Finalmente!! Non immaginate il valore del vostro sforzo, aiutate noi e i bar"
+                Sentence = "Thank you!! Your help is precious for helping us and the bars"
             },
         };
 
@@ -47,7 +47,7 @@ namespace SansApp.WebApp.Generator
             {
                 AvatarIcon = "/app/assets/img/avatars/osho.png",
                 User = "osho",
-                Sentence = "Giusto per regolamme, per quanto ce ne avete ancora?!"
+                Sentence = "Just to know, how much more you got?!"
             },
             //new Message
             //{
@@ -69,19 +69,19 @@ namespace SansApp.WebApp.Generator
             {
                 AvatarIcon = "/app/assets/img/avatars/osho.png",
                 User = "osho",
-                Sentence = "è tempo che tu smetta di cercare fuori di te, tutto quello che a tuo avviso potrebbe renderti felice. Guarda in te, torna a casa!"
+                Sentence = "It is time you stop searching something outside, everything that can make you happy is inside of you. Search it better and go home!"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/gio.png",
                 User = "gio",
-                Sentence = "Voi domani non avete da fare nulla? Io domani lavoro"
+                Sentence = "Don't you have anything to do tomorrow? I'll work early in the morning"
             },
             new Message
             {
                 AvatarIcon = "/app/assets/img/avatars/osho.png",
                 User = "osho",
-                Sentence = "La gente non sta bene"
+                Sentence = "People is insane"
             },
             //new Message
             //{
@@ -99,7 +99,7 @@ namespace SansApp.WebApp.Generator
             {
                 AvatarIcon = "/app/assets/img/avatars/ludo.png",
                 User = "ludo",
-                Sentence = "Non costringetemi a trasfermi, c'è trooooppo rumore"
+                Sentence = "Please don't make me move out, there's too much noise!"
             },
         };
     }
