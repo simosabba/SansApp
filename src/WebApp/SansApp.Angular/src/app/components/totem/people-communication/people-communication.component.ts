@@ -12,6 +12,7 @@ export class PeopleCommunicationComponent implements OnInit {
   private _hubConnection: HubConnection;
   message: Message;
   messageId: string;
+  spiegazioneClass = 'positive';
 
   msgTime: Date;
   shhCount = 0;
@@ -52,7 +53,18 @@ export class PeopleCommunicationComponent implements OnInit {
 
     this.noiseService.noiseSampleReceived.subscribe((sample: DbSample) => {
       this.dbAvg = sample.avg;
+      this.setSpiegazioneClass(sample.avg);
     });
+  }
+
+  private setSpiegazioneClass(avg: number) {
+    if (avg < 55) {
+      this.spiegazioneClass = 'positive-b';
+    } else if (avg < 65) {
+      this.spiegazioneClass = 'positive';
+    } else {
+      this.spiegazioneClass = 'negative';
+    }
   }
 
   getShhImage() {

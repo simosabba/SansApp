@@ -7,10 +7,21 @@
 }
 
 #spiegazione {
-  width: 360px;
+  width: 456px;
   height: 280px;
-  background-image: url('/assets/img/components/spiegazione.png');
   background-size: cover;
+
+  &.negative {
+    background-image: url('/assets/img/components/frase-inglese-negativa.png');
+  }
+
+  &.positive {
+    background-image: url('/assets/img/components/frase-inglese-positiva.png');
+  }
+
+  &.positive-b {
+    background-image: url('/assets/img/components/frase-inglese-positiva-2.png');
+  }
 
   .dbAvg {
     padding-left: 36px;

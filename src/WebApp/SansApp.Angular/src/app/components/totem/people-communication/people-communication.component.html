@@ -2,7 +2,7 @@
   <div class="row my-4">
 
     <div class="col-sm-4" style="align-items: center;">
-      <div id="spiegazione">
+      <div id="spiegazione" [class]="spiegazioneClass">
         <div class="dbAvg" *ngIf="dbAvg > 0">
           <span class="digit">{{getDbAvgCypher(3)}}</span>
           <span class="digit">{{getDbAvgCypher(2)}}</span>
