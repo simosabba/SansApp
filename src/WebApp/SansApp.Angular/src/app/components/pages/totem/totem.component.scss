@@ -18,11 +18,34 @@
   .footer {
     flex-shrink: 0;
   }
-  
-  .content {
-    background-image: url('/assets/img/backgrounds/sfondo_neon.png');
+
+  #background {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.7;
+
+    &.positive {
+      background-image: url('/assets/img/backgrounds/sfondo-1.jpg');
+    }
+
+    &.positive-b {
+      background-image: url('/assets/img/backgrounds/sfondo-2.jpg');
+    }
+
+    &.negative {
+      background-image: url('/assets/img/backgrounds/sfondo-3.jpg');
+    }
+  }
+  
+  .content {
+    // background-image: url('/assets/img/backgrounds/sfondo_neon.png');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }

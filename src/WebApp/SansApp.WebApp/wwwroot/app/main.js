@@ -77,7 +77,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<router-outlet class=\"router-flex\"></router-outlet>\n\n<!--super pecionata da sistemare-->\n<!-- \n<div>\n\n  <div [hidden]=\"isLoading() === false\">\n    <app-loader></app-loader>\n  </div>\n\n  <div class=\"page\" [hidden]=\"isLoading() === true\">\n\n    <div class=\"content\">\n      <app-header class=\"header\"></app-header>\n      <router-outlet class=\"router-flex\" #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <app-footer></app-footer>\n    </div>\n\n  </div>\n\n</div> -->\n"
+module.exports = "\n<router-outlet class=\"router-flex\"></router-outlet>\n\n<div style=\"position: absolute; opacity: 0; width: 0; height: 0; overflow: hidden\">\n    <app-img-preload></app-img-preload>\n</div>\n\n<!--super pecionata da sistemare-->\n<!-- \n<div>\n\n  <div [hidden]=\"isLoading() === false\">\n    <app-loader></app-loader>\n  </div>\n\n  <div class=\"page\" [hidden]=\"isLoading() === true\">\n\n    <div class=\"content\">\n      <app-header class=\"header\"></app-header>\n      <router-outlet class=\"router-flex\" #o=\"outlet\"></router-outlet>\n    </div>\n\n    <div class=\"footer\">\n      <app-footer></app-footer>\n    </div>\n\n  </div>\n\n</div> -->\n"
 
 /***/ }),
 
@@ -88,7 +88,7 @@ module.exports = "\n<router-outlet class=\"router-flex\"></router-outlet>\n\n<!-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxTaW1vbmVcXHNvdXJjZVxccmVwb3NcXFNhbnNBcHBcXHNyY1xcV2ViQXBwXFxTYW5zQXBwLkFuZ3VsYXIvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnBhZ2Uge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBtaW4taGVpZ2h0OiAxMDB2aDtcclxuICB9XHJcbiAgXHJcbiAgLmNvbnRlbnQge1xyXG4gICAgZmxleDogMSAwIGF1dG87XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICB9XHJcbiAgXHJcbiAgLmhlYWRlciB7XHJcbiAgICBmbGV4OiAwIDEgYXV0bztcclxuICB9XHJcbiAgXHJcbiAgLmZvb3RlciB7XHJcbiAgICBmbGV4LXNocmluazogMDtcclxuICB9XHJcbiAgIl19 */"
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxTaW1vbmVcXHNvdXJjZVxccmVwb3NcXFNhbnNBcHBcXHNyY1xcV2ViQXBwXFxTYW5zQXBwLkFuZ3VsYXIvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFnZSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG59XHJcblxyXG4uY29udGVudCB7XHJcbiAgZmxleDogMSAwIGF1dG87XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG4uaGVhZGVyIHtcclxuICBmbGV4OiAwIDEgYXV0bztcclxufVxyXG5cclxuLmZvb3RlciB7XHJcbiAgZmxleC1zaHJpbms6IDA7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -166,12 +166,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/pages/adm/adm.component */ "./src/app/components/pages/adm/adm.component.ts");
 /* harmony import */ var _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/controls/noise-control/noise-control.component */ "./src/app/components/controls/noise-control/noise-control.component.ts");
 /* harmony import */ var _components_chat_chat_chat_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/chat/chat/chat.component */ "./src/app/components/chat/chat/chat.component.ts");
+/* harmony import */ var _components_img_preload_img_preload_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/img-preload/img-preload.component */ "./src/app/components/img-preload/img-preload.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -211,7 +213,8 @@ var AppModule = /** @class */ (function () {
                 _components_controls_noise_chart_noise_chart_component__WEBPACK_IMPORTED_MODULE_15__["NoiseChartComponent"],
                 _components_pages_adm_adm_component__WEBPACK_IMPORTED_MODULE_16__["AdmComponent"],
                 _components_controls_noise_control_noise_control_component__WEBPACK_IMPORTED_MODULE_17__["NoiseControlComponent"],
-                _components_chat_chat_chat_component__WEBPACK_IMPORTED_MODULE_18__["ChatComponent"]
+                _components_chat_chat_chat_component__WEBPACK_IMPORTED_MODULE_18__["ChatComponent"],
+                _components_img_preload_img_preload_component__WEBPACK_IMPORTED_MODULE_19__["ImgPreloadComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -452,6 +455,69 @@ var NoiseControlComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__["NoiseService"]])
     ], NoiseControlComponent);
     return NoiseControlComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/img-preload/img-preload.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/img-preload/img-preload.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"cont\">\n  <img src=\"/app/assets/img/backgrounds/sfondo-1.jpg\">\n  <img src=\"/app/assets/img/backgrounds/sfondo-2.jpg\">\n  <img src=\"/app/assets/img/backgrounds/sfondo-3.jpg\">\n  <img src=\"/app/assets/img/components/frase-inglese-negativa.png\">\n  <img src=\"/app/assets/img/components/frase-inglese-positiva.png\">\n  <img src=\"/app/assets/img/components/frase-inglese-positiva-2.png\">\n  <img src=\"/app/assets/img/components/shh-1.png\">\n  <img src=\"/app/assets/img/components/shh-2.png\">\n  <img src=\"/app/assets/img/components/shh-3.png\">\n  <img src=\"/app/assets/img/components/shh-4.png\">\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/img-preload/img-preload.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/img-preload/img-preload.component.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaW1nLXByZWxvYWQvaW1nLXByZWxvYWQuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/img-preload/img-preload.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/img-preload/img-preload.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: ImgPreloadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImgPreloadComponent", function() { return ImgPreloadComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ImgPreloadComponent = /** @class */ (function () {
+    function ImgPreloadComponent() {
+    }
+    ImgPreloadComponent.prototype.ngOnInit = function () {
+    };
+    ImgPreloadComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-img-preload',
+            template: __webpack_require__(/*! ./img-preload.component.html */ "./src/app/components/img-preload/img-preload.component.html"),
+            styles: [__webpack_require__(/*! ./img-preload.component.scss */ "./src/app/components/img-preload/img-preload.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ImgPreloadComponent);
+    return ImgPreloadComponent;
 }());
 
 
@@ -852,7 +918,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <!-- <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div> -->\n\n      <div class=\"card p-3 text-center\">\n        <h3>Non riesci a dormire? Invia uno shh</h3>\n        <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n\n        <div class=\"alert alert-info text-center my-4\" *ngIf=\"totShh > 0\">\n          +{{totShh}} Shh\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container h-100 align-self-center\">\n  <div class=\"row justify-content-center\">\n    <div class=\"col-md-8\">\n      <!-- <div class=\"card p-3\">\n        <h3 class=\"text-center\">Chat</h3>\n        <label>Nome</label>\n        <input [(ngModel)]=\"user\" class=\"form-control\">\n  \n        <label>Messaggio</label>\n        <textarea [(ngModel)]=\"message\" rows=\"5\" class=\"form-control\"></textarea>\n  \n        <div class=\"text-center my-2\">\n            <button class=\"btn btn-alert\" (click)=\"sendMessage()\">Invia</button>\n        </div>\n      </div>\n\n      <div class=\"my-4\"></div> -->\n\n      <div class=\"card p-3 text-center\">\n        <h3>Can't sleep? Send a shh</h3>\n        <button class=\"btn btn-success btn-lg\" (click)=\"sendShh()\">#Shhhhh</button>\n\n        <div class=\"alert alert-info text-center my-4\" *ngIf=\"totShh > 0\">\n          +{{totShh}} Shh\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -935,7 +1001,7 @@ var SendMessageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <app-loader></app-loader>\n    </div>\n  \n    <div class=\"page\" [hidden]=\"isLoading() === true\">\n  \n      <div class=\"content\">\n        <!-- <app-header class=\"header\"></app-header> -->\n        <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n      </div>\n  \n      <!-- <div class=\"footer\">\n        <app-footer></app-footer>\n      </div> -->\n  \n    </div>\n  \n  </div>"
+module.exports = "<div>\n\n  <div [hidden]=\"isLoading() === false\">\n    <app-loader></app-loader>\n  </div>\n\n  <div class=\"page\" [hidden]=\"isLoading() === true\">\n\n    <div class=\"content\">\n      <div id=\"background\" [class]=\"totemBackground\"></div>\n      <!-- <app-header class=\"header\"></app-header> -->\n      <app-home class=\"d-flex flex-fill flex-column\"></app-home>\n    </div>\n\n    <!-- <div class=\"footer\">\n        <app-footer></app-footer>\n      </div> -->\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -946,7 +1012,7 @@ module.exports = "<div>\n\n    <div [hidden]=\"isLoading() === false\">\n      <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n.content {\n  background-image: url('/app/assets/img/backgrounds/sfondo_neon.png');\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xccGFnZXNcXHRvdGVtXFx0b3RlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxxRUFBZ0U7RUFDaEUsNkJBQTRCO0VBQzVCLDRCQUEyQjtFQUMzQiw2QkFBNEI7RUFDNUIsdUJBQXNCLEVBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS90b3RlbS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucGFnZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBmbGV4OiAxIDAgYXV0bztcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyIHtcclxuICAgIGZsZXg6IDAgMSBhdXRvO1xyXG4gIH1cclxuICBcclxuICAuZm9vdGVyIHtcclxuICAgIGZsZXgtc2hyaW5rOiAwO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9hc3NldHMvaW1nL2JhY2tncm91bmRzL3Nmb25kb19uZW9uLnBuZycpO1xyXG4gICAgYmFja2dyb3VuZC1hdHRhY2htZW50OiBmaXhlZDtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gIH0iXX0= */"
+module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh; }\n\n.content {\n  flex: 1 0 auto;\n  display: flex;\n  flex-direction: column; }\n\n.header {\n  flex: 0 1 auto; }\n\n.footer {\n  flex-shrink: 0; }\n\n#background {\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  opacity: 0.7; }\n\n#background.positive {\n    background-image: url('/app/assets/img/backgrounds/sfondo-1.jpg'); }\n\n#background.positive-b {\n    background-image: url('/app/assets/img/backgrounds/sfondo-2.jpg'); }\n\n#background.negative {\n    background-image: url('/app/assets/img/backgrounds/sfondo-3.jpg'); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS9DOlxcVXNlcnNcXFNpbW9uZVxcc291cmNlXFxyZXBvc1xcU2Fuc0FwcFxcc3JjXFxXZWJBcHBcXFNhbnNBcHAuQW5ndWxhci9zcmNcXGFwcFxcY29tcG9uZW50c1xccGFnZXNcXHRvdGVtXFx0b3RlbS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLGNBQWE7RUFDYix1QkFBc0I7RUFDdEIsa0JBQWlCLEVBQ2xCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGNBQWE7RUFDYix1QkFBc0IsRUFDdkI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSw2QkFBNEI7RUFDNUIsNEJBQTJCO0VBQzNCLDZCQUE0QjtFQUM1Qix1QkFBc0I7RUFDdEIsYUFBWTtFQUNaLFlBQVc7RUFDWCxtQkFBa0I7RUFDbEIsYUFBWSxFQWFiOztBQXJCRDtJQVdJLGtFQUE2RCxFQUM5RDs7QUFaSDtJQWVJLGtFQUE2RCxFQUM5RDs7QUFoQkg7SUFtQkksa0VBQTZELEVBQzlEIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9wYWdlcy90b3RlbS90b3RlbS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucGFnZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudCB7XHJcbiAgICBmbGV4OiAxIDAgYXV0bztcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIH1cclxuICBcclxuICAuaGVhZGVyIHtcclxuICAgIGZsZXg6IDAgMSBhdXRvO1xyXG4gIH1cclxuICBcclxuICAuZm9vdGVyIHtcclxuICAgIGZsZXgtc2hyaW5rOiAwO1xyXG4gIH1cclxuXHJcbiAgI2JhY2tncm91bmQge1xyXG4gICAgYmFja2dyb3VuZC1hdHRhY2htZW50OiBmaXhlZDtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBvcGFjaXR5OiAwLjc7XHJcblxyXG4gICAgJi5wb3NpdGl2ZSB7XHJcbiAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL2Fzc2V0cy9pbWcvYmFja2dyb3VuZHMvc2ZvbmRvLTEuanBnJyk7XHJcbiAgICB9XHJcblxyXG4gICAgJi5wb3NpdGl2ZS1iIHtcclxuICAgICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcvYXNzZXRzL2ltZy9iYWNrZ3JvdW5kcy9zZm9uZG8tMi5qcGcnKTtcclxuICAgIH1cclxuXHJcbiAgICAmLm5lZ2F0aXZlIHtcclxuICAgICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcvYXNzZXRzL2ltZy9iYWNrZ3JvdW5kcy9zZm9uZG8tMy5qcGcnKTtcclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiAgLmNvbnRlbnQge1xyXG4gICAgLy8gYmFja2dyb3VuZC1pbWFnZTogdXJsKCcvYXNzZXRzL2ltZy9iYWNrZ3JvdW5kcy9zZm9uZG9fbmVvbi5wbmcnKTtcclxuICAgIC8vIGJhY2tncm91bmQtYXR0YWNobWVudDogZml4ZWQ7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgLy8gYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9Il19 */"
 
 /***/ }),
 
@@ -961,15 +1027,22 @@ module.exports = ".page {\n  display: flex;\n  flex-direction: column;\n  min-he
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TotemComponent", function() { return TotemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/noise-service/noise.service */ "./src/app/services/noise-service/noise.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var TotemComponent = /** @class */ (function () {
-    function TotemComponent() {
+    function TotemComponent(noiseService) {
+        this.noiseService = noiseService;
+        this.totemBackground = '';
         this.isAppReady = false;
     }
     TotemComponent.prototype.ngOnInit = function () {
@@ -977,16 +1050,31 @@ var TotemComponent = /** @class */ (function () {
         setTimeout(function () {
             _this.isAppReady = true;
         }, 1500);
+        this.noiseService.noiseSampleReceived.subscribe(function (sample) {
+            _this.setBackgroundClass(sample.avg);
+        });
     };
     TotemComponent.prototype.isLoading = function () {
         return !this.isAppReady;
+    };
+    TotemComponent.prototype.setBackgroundClass = function (avg) {
+        if (avg < 55) {
+            this.totemBackground = 'positive-b';
+        }
+        else if (avg < 65) {
+            this.totemBackground = 'positive';
+        }
+        else {
+            this.totemBackground = 'negative';
+        }
     };
     TotemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-totem',
             template: __webpack_require__(/*! ./totem.component.html */ "./src/app/components/pages/totem/totem.component.html"),
             styles: [__webpack_require__(/*! ./totem.component.scss */ "./src/app/components/pages/totem/totem.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [src_app_services_noise_service_noise_service__WEBPACK_IMPORTED_MODULE_1__["NoiseService"]])
     ], TotemComponent);
     return TotemComponent;
 }());

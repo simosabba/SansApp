@@ -18,6 +18,7 @@ import { NoiseChartComponent } from './components/controls/noise-chart/noise-cha
 import { AdmComponent } from './components/pages/adm/adm.component';
 import { NoiseControlComponent } from './components/controls/noise-control/noise-control.component';
 import { ChatComponent } from './components/chat/chat/chat.component';
+import { ImgPreloadComponent } from './components/img-preload/img-preload.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ChatComponent } from './components/chat/chat/chat.component';
     NoiseChartComponent,
     AdmComponent,
     NoiseControlComponent,
-    ChatComponent
+    ChatComponent,
+    ImgPreloadComponent
   ],
   imports: [
     BrowserModule,

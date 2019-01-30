@@ -1,20 +1,21 @@
 <div>
 
-    <div [hidden]="isLoading() === false">
-      <app-loader></app-loader>
+  <div [hidden]="isLoading() === false">
+    <app-loader></app-loader>
+  </div>
+
+  <div class="page" [hidden]="isLoading() === true">
+
+    <div class="content">
+      <div id="background" [class]="totemBackground"></div>
+      <!-- <app-header class="header"></app-header> -->
+      <app-home class="d-flex flex-fill flex-column"></app-home>
     </div>
-  
-    <div class="page" [hidden]="isLoading() === true">
-  
-      <div class="content">
-        <!-- <app-header class="header"></app-header> -->
-        <app-home class="d-flex flex-fill flex-column"></app-home>
-      </div>
-  
-      <!-- <div class="footer">
+
+    <!-- <div class="footer">
         <app-footer></app-footer>
       </div> -->
-  
-    </div>
-  
+
   </div>
+
+</div>
