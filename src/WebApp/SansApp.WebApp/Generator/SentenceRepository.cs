@@ -23,8 +23,8 @@ namespace SansApp.WebApp.Generator
             },
             new Message
             {
-                AvatarIcon = "/app/assets/img/avatars/leo.png",
-                User = "leo",
+                AvatarIcon = "/app/assets/img/avatars/gio.png",
+                User = "gio",
                 Sentence = "Finally the district I love is respected"
             },
             new Message
